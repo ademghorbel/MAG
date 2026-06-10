@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Video Projects — Mohamed Adam Ghorbel</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    /* ── Video Thumbnail Card ── */
+    .video-thumb-wrap {
+      position: relative;
+      height: 240px;
+      overflow: hidden;
+      background: #111;
+      cursor: pointer;
+    }
+    .video-thumb-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s cubic-bezier(0.16,1,0.3,1), opacity 0.3s;
+    }
+    .video-thumb-wrap:hover img {
+      transform: scale(1.04);
+      opacity: 0.7;
+    }
+    .video-play-btn {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      pointer-events: none;
+    }
+    .video-play-btn svg {
+      width: 64px;
+      height: 64px;
+      filter: drop-shadow(0 4px 16px rgba(0,0,0,0.5));
+      transition: transform 0.3s cubic-bezier(0.16,1,0.3,1), opacity 0.3s;
+      opacity: 0.9;
+    }
+    .video-thumb-wrap:hover .video-play-btn svg {
+      transform: scale(1.12);
+      opacity: 1;
+    }
+
+    /* ── Video Modal ── */
+    .video-modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+    }
+    .video-modal.active { display: flex; }
+    .video-modal-backdrop {
+      position: absolute;
+      inset: 0;
+      background: rgba(10,10,10,0.96);
+      backdrop-filter: blur(10px);
+      opacity: 0;
+      transition: opacity 0.35s ease;
+    }
+    .video-modal.active .video-modal-backdrop { opacity: 1; }
+    .video-modal-content {
+      position: relative;
+      z-index: 10000;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      padding: 2rem;
+      gap: 1.25rem;
+    }
+    .video-modal-frame {
+      width: min(90vw, 960px);
+      aspect-ratio: 16/9;
+      border: none;
+      border-radius: 12px;
+      box-shadow: 0 32px 80px rgba(0,0,0,0.6);
+      opacity: 0;
+      transform: scale(0.92) translateY(20px);
+      transition: opacity 0.45s cubic-bezier(0.16,1,0.3,1) 0.1s,
+                  transform 0.45s cubic-bezier(0.16,1,0.3,1) 0.1s;
+    }
+    .video-modal.active .video-modal-frame {
+      opacity: 1;
+      transform: scale(1) translateY(0);
+    }
+    .video-modal-title {
+      color: #fff;
+      font-size: 15px;
+      font-family: var(--font-mono);
+      letter-spacing: 0.04em;
+      opacity: 0;
+      transform: translateY(10px);
+      transition: opacity 0.4s ease 0.25s, transform 0.4s ease 0.25s;
+    }
+    .video-modal.active .video-modal-title { opacity: 1; transform: translateY(0); }
+    .video-modal-close {
+      position: absolute;
+      top: 1.5rem;
+      right: 1.5rem;
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 50%;
+      width: 44px;
+      height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 20px;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.2s;
+    }
+    .video-modal-close:hover { background: rgba(255,255,255,0.2); transform: scale(1.05); }
+  </style>
+</head>
+<body data-page="projects" data-barba-namespace="projects">
+<div class="cursor-glow"></div>
+<nav></nav>
+
+<div class="page-hero">
+  <div class="container">
+    <a href="index.html" class="btn-ghost" style="margin-bottom:20px;display:inline-block">← Back to Home</a>
+    <div class="eyebrow">Video Work</div>
+    <h1>Video Projects &amp;<br><em style="font-style:normal;color:var(--orange)">Motion.</em></h1>
+    <p class="sub">A collection of motion graphics, promotional videos, and campaign visuals.</p>
+  </div>
+</div>
+
+<section style="padding-top:64px">
+  <div class="container">
+    <div class="videos-grid" id="videos-grid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:24px;"></div>
+  </div>
+</section>
+
+<div class="container" style="margin-top:48px"><div class="divider"></div></div>
+
+<section style="padding:80px 0">
+  <div class="container">
+    <div class="cta-box card-tilt" data-reveal>
+      <div class="cta-glow"></div>
+      <div>
+        <h2 style="font-size:clamp(24px,3vw,40px);letter-spacing:-0.03em;line-height:1.1">
+          Looking for professional<br>Video Editing &amp; Motion Design.
+        </h2>
+        <p style="font-size:15px;color:var(--muted);margin-top:14px">
+          Available for freelance projects — Motion Graphics, Promo Videos, and Visual Effects.
+        </p>
+      </div>
+      <a href="contact.html" class="btn-primary" data-magnetic="55">Get in touch →</a>
+    </div>
+  </div>
+</section>
+
+<footer></footer>
+
+<!-- ═══ VIDEO MODAL ═══ -->
+<div id="videoModal" class="video-modal" onclick="closeVideoModal(event)">
+  <div class="video-modal-backdrop"></div>
+  <div class="video-modal-content">
+    <button class="video-modal-close" onclick="closeVideoModal(event)">✕</button>
+    <iframe id="modalVideoFrame" class="video-modal-frame" src="" allow="autoplay; fullscreen" allowfullscreen></iframe>
+    <div class="video-modal-title" id="modalVideoTitle"></div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/animations.js"></script>
+<script src="assets/js/main.js"></script>
+<script>
+  function openVideoModal(url, title) {
+    const modal = document.getElementById('videoModal');
+    document.getElementById('modalVideoFrame').src = url;
+    document.getElementById('modalVideoTitle').textContent = title;
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeVideoModal(event) {
+    if (event.target === event.currentTarget || event.target.classList.contains('video-modal-close')) {
+      const modal = document.getElementById('videoModal');
+      modal.classList.remove('active');
+      document.body.style.overflow = '';
+      // Stop video by clearing src
+      document.getElementById('modalVideoFrame').src = '';
+    }
+  }
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') closeVideoModal({ target: document.getElementById('videoModal'), currentTarget: document.getElementById('videoModal') });
+  });
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const grid = document.getElementById("videos-grid");
+    if (!grid || typeof MAG_DATA === "undefined" || !MAG_DATA.videos) return;
+    grid.innerHTML = MAG_DATA.videos.map((v, i) => `
+      <div class="card-hover artwork" style="cursor:default; border:1px solid var(--hairline); border-radius:var(--radius-md); overflow:hidden;" data-delay="${i}">
+        <div class="video-thumb-wrap" onclick="openVideoModal('${v.url}', '${v.title.replace(/'/g, "\\'")}')">
+          <img
+            src="${v.thumb || ''}"
+            alt="${v.title}"
+            loading="lazy"
+            onerror="this.style.display='none'; this.parentElement.style.background='var(--card-bg)'"
+          >
+          <div class="video-play-btn">
+            <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="40" cy="40" r="40" fill="rgba(0,0,0,0.55)"/>
+              <path d="M32 26L58 40L32 54V26Z" fill="white"/>
+            </svg>
+          </div>
+        </div>
+        <div style="padding:20px;">
+          <div style="font-weight:600;font-size:18px;margin-bottom:4px;">${v.title}</div>
+          <div style="font-size:14px;color:var(--muted);margin-bottom:12px;">${v.client}</div>
+          <div class="project-tags">${v.tags.map(t=>`<span class="tag">${t}</span>`).join("")}</div>
+        </div>
+      </div>
+    `).join("");
+
+    gsap.registerPlugin(ScrollTrigger);
+    const items = document.querySelectorAll('#videos-grid .artwork');
+    items.forEach((item, index) => {
+      gsap.set(item, { opacity: 0, y: 36 });
+      gsap.to(item, {
+        opacity: 1, y: 0, duration: 0.65, ease: 'cubic-bezier(0.16, 1, 0.3, 1)', delay: index * 0.1,
+        scrollTrigger: { trigger: item, start: 'top 85%', once: true }
+      });
+    });
+  });
+</script>
+</body></html>
+

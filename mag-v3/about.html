@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>About — Mohamed Adam Ghorbel</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body data-page="about" data-barba-namespace="about">
+  <div class="cursor-glow"></div>
+  <nav></nav>
+
+  <div class="page-hero">
+    <div class="container">
+      <div class="eyebrow">About</div>
+      <h1>Design meets<br><em style="font-style:normal;color:var(--blue)">data.</em></h1>
+      <p class="sub">2nd-year Data Engineering student at ENET'Com Sfax — graphic designer, event media lead, and AI
+        engineering intern.</p>
+    </div>
+  </div>
+
+  <section>
+    <div class="container about-flow">
+      <div class="about-story card-hover" data-reveal>
+        <p class="section-label">Story</p>
+        <p class="about-p">I'm Mohamed Adam Ghorbel — a data engineering student with a parallel practice in graphic
+          design. I came up through the IEEE community at ENET'Com Sfax, where design means something concrete: a
+          conference needs an identity, an event needs clarity, a community needs a voice.</p>
+        <p class="about-p">By day I build data pipelines, agentic AI systems, and machine learning models. By night I
+          design event identities, brand systems, and visual communication for the same community. Both sides feed each
+          other.</p>
+        <p class="about-p">Currently seeking a summer internship in Data Engineering, Data Analysis, or AI — while
+          continuing to contribute design work at Starwaves and IEEE ENETCOM SB.</p>
+
+        <div class="skills-split">
+          <div>
+            <p class="skills-split-label"><span class="dot dot--blue"></span>Design Tools</p>
+            <div id="design-skills-list" data-stagger style="display:flex;flex-wrap:wrap;gap:8px"></div>
+          </div>
+          <div>
+            <p class="skills-split-label"><span class="dot dot--orange"></span>Tech Stack</p>
+            <div id="tech-skills-list" data-stagger style="display:flex;flex-wrap:wrap;gap:8px"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-stack" data-reveal>
+        <div class="about-stack-head">
+          <p class="section-label">Selected Timeline</p>
+          <h2>Experience and education, stacked as you scroll.</h2>
+        </div>
+        <div id="about-stack-list" class="stacked-cards" data-stack-track></div>
+      </div>
+    </div>
+  </section>
+
+  <footer></footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/animations.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>
