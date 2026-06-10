@@ -1,0 +1,10 @@
+# SSH Keys & Secrets
+No-Passphrase*
+*.pem
+*.pub
+id_rsa*
+.env
+
+# System Files
+.DS_Store
+Thumbs.db
