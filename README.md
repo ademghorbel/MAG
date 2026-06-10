@@ -20,11 +20,10 @@ This repository contains the source code for my personal portfolio. It is built 
 - **Media:** WebP images, Iframe video embedding
 
 ## 📁 Repository Structure
-- `/mag-v3/` — Main project directory.
-  - `index.html`, `work.html`, `projects.html` — Core pages.
-  - `/assets/css/` — Global styling and design tokens.
-  - `/assets/js/` — Controllers, animation engine, and data model.
-  - `/events/` — Detailed case studies for individual events.
+- `index.html`, `work.html`, `projects.html` — Core pages.
+- `/assets/css/` — Global styling and design tokens.
+- `/assets/js/` — Controllers, animation engine, and data model.
+- `/events/` — Detailed case studies for individual events.
 
 ## 🚀 Live Demo
 The portfolio is hosted via GitHub Pages and is automatically updated when pushed.
