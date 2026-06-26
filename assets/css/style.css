@@ -857,6 +857,70 @@ nav.nav--scrolled {
   transform: scale(1.04);
 }
 
+/* ── Event Logo Card — flight-card style (home page grid) ── */
+.event-logo-card {
+  display: flex; flex-direction: column;
+  text-decoration: none;
+  border: 1px solid var(--hairline);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: var(--card-bg);
+  transition: border-color 0.25s, transform 0.25s;
+}
+.event-logo-card.elc--hover {
+  border-color: var(--blue);
+  transform: translateY(-3px);
+}
+.elc-img {
+  height: 160px; overflow: hidden; position: relative;
+  border-bottom: 1px solid var(--hairline);
+}
+.elc-img img {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%; object-fit: cover;
+  transition: transform 0.4s cubic-bezier(0.16,1,0.3,1);
+}
+.event-logo-card.elc--hover .elc-img img { transform: scale(1.05); }
+.elc-img-fallback {
+  font-family: var(--font-mono); font-size: 10px;
+  letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted);
+}
+.elc-body { padding: 20px; }
+.elc-route { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.elc-endpoint { min-width: 0; }
+.elc-endpoint--right { text-align: right; }
+.elc-ep-label {
+  font-family: var(--font-mono); font-size: 9px;
+  letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted);
+}
+.elc-ep-code {
+  font-family: var(--font-display, var(--font-sans));
+  font-size: 34px; font-weight: 800; letter-spacing: -0.03em;
+  color: var(--text); line-height: 1; margin: 3px 0;
+}
+.elc-mid { flex: 1; text-align: center; min-width: 0; overflow: hidden; }
+.elc-mid-cat {
+  font-family: var(--font-mono); font-size: 9px;
+  letter-spacing: 0.12em; text-transform: uppercase; color: var(--blue);
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin-bottom: 5px;
+}
+.elc-mid-connector { display: flex; align-items: center; justify-content: center; gap: 5px; }
+.elc-mid-line { flex: 1; height: 1px; background: var(--hairline-2, var(--hairline)); }
+.elc-mid-icon { color: var(--muted); flex-shrink: 0; }
+.elc-divider {
+  border: none; border-top: 1px dashed var(--hairline-2, var(--hairline));
+  margin: 14px 0;
+}
+.elc-title {
+  font-size: 13px; font-weight: 700; color: var(--text);
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.elc-role-line {
+  font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--muted); margin-top: 5px;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+
 /* ── Event detail hero with logo background ── */
 .page-hero--event {
   position: relative;

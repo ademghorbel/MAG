@@ -160,6 +160,7 @@ const MAG_DATA = {
       id: "aesh", title: "AESH 2026", subtext: "AESS Sustainability Hackathon 2026",
       role: "Media Posts Design", date: "2025", category: "International Hackathon",
       logo: "assets/images/events/aesh/logo.webp",
+      banner: "assets/images/events/aesh/website.webp",
       link: "aesh.html", index: "01",
       about: [
         "AESS Sustainability Hackathon (AESH) 2026 serves as a dynamic hub connecting electrical engineering students with industry professionals.",
@@ -175,6 +176,7 @@ const MAG_DATA = {
       id: "cstam-3", title: "CSTAM 3.0", subtext: "Computer Society Tunisian Annual Meeting · 3rd Edition",
       role: "Media & Communication Design", date: "2025", category: "International Congress",
       logo: "assets/images/events/cstam-3/logo.webp",
+      banner: "assets/images/events/cstam-3/you will be impressed.webp",
       link: "cstam-3.html", index: "02",
       about: [
         "CSTAM 3.0 — the Computer Society Tunisian Annual Meeting (3rd Edition) — is a premier technical conference bridging the gap between academia and industry for engineering students.",
@@ -190,6 +192,7 @@ const MAG_DATA = {
       id: "trsyp-2", title: "TRSYP 2.0", subtext: "IEEE Tunisian RAS Student and Young Professional Congress · 2nd Edition",
       role: "Media Leader", date: "2025", category: "Internation Competition x Congress",
       logo: "assets/images/events/trsyp-2/logo.webp",
+      banner: "assets/images/events/trsyp-2/Main.webp",
       link: "trsyp-2.html", index: "03",
       about: [
         "TRSYP 2.0 — the IEEE Tunisian RAS Student and Young Professional Congress (2nd Edition) — is a cornerstone event uniting student professionals across the IEEE Tunisia Section, marking a significant leap in regional collaboration.",
@@ -205,6 +208,7 @@ const MAG_DATA = {
       id: "ies-syp-2", title: "IES SYP Congress 2.0", subtext: "IEEE Industrial Electronics Society Students and Young Professionals Congress · 2nd Edition",
       role: "Media & Communication Team member", date: "2025", category: "International Congress",
       logo: "assets/images/events/ies-syp-2/logo.webp",
+      banner: "assets/images/events/ies-syp-2/Thumbnail.webp",
       link: "ies-syp-2.html", index: "04",
       about: [
         "IES SYP Congress 2.0 — the IEEE Industrial Electronics Society Students and Young Professionals Congress (2nd Edition) — provides an international platform for industrial electronics students and young professionals to network and share innovations.",
@@ -236,6 +240,7 @@ const MAG_DATA = {
       id: "xtreme-19", title: "IEEE Xtreme 19.0", subtext: "Global 24h Programming Competition",
       role: "Media & Branding Lead", date: "2025", category: "International CP Competition",
       logo: "assets/images/events/xtreme-19/logo.webp",
+      banner: "assets/images/events/xtreme-19/event-banner.webp",
       link: "xtreme-19.html", index: "06",
       about: [
         "IEEEXtreme is a prestigious global 24-hour hackathon that challenges the best coding minds across hundreds of universities worldwide.",
@@ -251,6 +256,7 @@ const MAG_DATA = {
       id: "eduvision", title: "EduVision", subtext: "IEEE Educational & Capacity Building Initiative",
       role: "Media & Communication Design Lead", date: "2025", category: "Local Initiative",
       logo: "assets/images/events/eduvision/logo.webp",
+      banner: "assets/images/events/eduvision/BANNER.webp",
       link: "eduvision.html", index: "08",
       about: [
         "EduVision is an IEEE initiative focused on educational excellence and capacity building across emerging markets.",
@@ -267,6 +273,7 @@ const MAG_DATA = {
       id: "cshize", title: "IEEE CS SYP HIZE", subtext: "Computer Society Students and Young Professionals High Impact Zonal Events",
       role: "Media Designer & Community Organizer", date: "2025", category: "Hacktahon and Chess Competition",
       logo: "assets/images/events/cshize/logo.webp",
+      banner: "assets/images/events/cshize/hachathonnnn.webp",
       link: "cshize.html", index: "09",
       about: [
         "IEEE CS SYP HIZE — the Computer Society Students and Young Professionals High Impact Zonal Events — is a grassroots initiative designed to inspire youth in tech. The event features hackathons, technical workshops, and community engagement booths.",
