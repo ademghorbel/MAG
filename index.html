@@ -21,6 +21,7 @@
 
   <!-- ── HERO ───────────────────────────────────────────── -->
   <section class="hero-section" id="hero">
+    <div id="aurora-hero" class="aurora-bg"></div>
     <div class="hero-glow" data-parallax="0.2"></div>
     <div class="hero-grid">
       <div>
@@ -197,140 +198,7 @@
   <script src="assets/js/data.js"></script>
   <script src="assets/js/animations.js"></script>
   <script src="assets/js/main.js"></script>
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-
-      /* ── Video horizontal scroll ── */
-      const track = document.getElementById("hscroll-work");
-      if (track && typeof MAG_DATA !== "undefined" && MAG_DATA.videos) {
-        const firstThreeVideos = MAG_DATA.videos.slice(0, 3);
-        let htmlContent = firstThreeVideos.map(v => `
-        <div class="h-scroll-card card-hover artwork" style="cursor:pointer" onclick="openHomeVideoModal('${v.url}', '${v.title.replace(/'/g, "\\'")}')">
-          <div class="h-scroll-card-img" style="background:#111;position:relative;overflow:hidden;">
-            <img src="${v.thumb || ''}" alt="${v.title}" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.4s cubic-bezier(0.16,1,0.3,1)" loading="lazy"
-              onerror="this.style.display='none'; this.parentElement.style.background='var(--card-bg)'"
-              onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'">
-            <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;pointer-events:none">
-              <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:56px;height:56px;filter:drop-shadow(0 4px 16px rgba(0,0,0,0.5));opacity:0.9">
-                <circle cx="40" cy="40" r="40" fill="rgba(0,0,0,0.55)"/>
-                <path d="M32 26L58 40L32 54V26Z" fill="white"/>
-              </svg>
-            </div>
-          </div>
-          <div class="h-scroll-card-body">
-            <div class="h-scroll-card-title">${v.title}</div>
-            <div class="h-scroll-card-sub">${v.client}</div>
-            <div class="project-tags" style="margin-top:10px">${v.tags.map(t => `<span class="tag">${t}</span>`).join("")}</div>
-          </div>
-        </div>
-      `).join("");
-        htmlContent += `
-        <a href="videos.html" class="h-scroll-card card-hover artwork" style="display:flex;flex-direction:column;align-items:center;justify-content:center;background:var(--card-bg);text-decoration:none;">
-          <h3 style="margin-bottom:8px;">Show more</h3>
-          <p style="color:var(--muted);font-size:14px;">View all video projects →</p>
-        </a>
-      `;
-        track.innerHTML = htmlContent;
-      }
-
-      /* ── Event Logos Grid ── */
-      const logosGrid = document.getElementById("event-logos-grid");
-      if (logosGrid && typeof MAG_DATA !== "undefined" && MAG_DATA.events) {
-        logosGrid.innerHTML = MAG_DATA.events.map(ev => `
-        <a href="events/${ev.id}.html" class="event-logo-card card-hover" style="
-          display:flex;
-          flex-direction:column;
-          text-decoration:none;
-          border:1px solid var(--hairline);
-          border-radius:var(--radius-md);
-          overflow:hidden;
-          background:var(--card-bg);
-          transition:border-color 0.25s, transform 0.25s;
-        "
-        onmouseover="this.style.borderColor='var(--blue)';this.style.transform='translateY(-3px)'"
-        onmouseout="this.style.borderColor='var(--hairline)';this.style.transform='translateY(0)'">
-
-          <!-- Logo area -->
-          <div style="
-            aspect-ratio:16/9;
-            background:var(--surface);
-            display:flex;
-            align-items:center;
-            justify-content:center;
-            overflow:hidden;
-            border-bottom:1px solid var(--hairline);
-            position:relative;
-          ">
-            <img
-              src="${ev.logo}"
-              alt="${ev.title} logo"
-              style="width:100%;height:100%;object-fit:contain;transition:transform 0.35s cubic-bezier(0.16,1,0.3,1)"
-              onerror="this.parentElement.innerHTML='<span style=\'font-family:var(--font-mono);font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted)\'>${ev.id}</span>'"
-            >
-          </div>
-
-          <!-- Card body -->
-          <div style="padding:20px 20px 18px;flex:1;display:flex;flex-direction:column;gap:8px;">
-            <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:8px;">
-              <span style="font-family:var(--font-display,var(--font-sans));font-size:15px;font-weight:700;color:var(--text);line-height:1.25;letter-spacing:-0.01em">${ev.title}</span>
-              <span style="
-                flex-shrink:0;
-                font-family:var(--font-mono);
-                font-size:9px;
-                letter-spacing:0.14em;
-                text-transform:uppercase;
-                padding:3px 8px;
-                border-radius:4px;
-                background:var(--blue-ghost,rgba(59,130,246,0.12));
-                color:var(--blue);
-                white-space:nowrap;
-              ">${ev.type || ev.category || 'Event'}</span>
-            </div>
-            <p style="font-size:12px;color:var(--muted);line-height:1.55;margin:0;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">${ev.subtext || ev.description || ''}</p>
-            <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:4px">
-              ${(ev.tags || []).slice(0, 4).map(t => `<span style="font-family:var(--font-mono);font-size:9px;letter-spacing:0.1em;text-transform:uppercase;padding:2px 7px;border-radius:4px;border:1px solid var(--hairline);color:var(--muted)">${t}</span>`).join('')}
-            </div>
-          </div>
-        </a>
-      `).join('');
-
-        /* Hover image scale on logo img */
-        logosGrid.querySelectorAll('.event-logo-card img').forEach(img => {
-          const card = img.closest('.event-logo-card');
-          card.addEventListener('mouseenter', () => img.style.transform = 'scale(1.06)');
-          card.addEventListener('mouseleave', () => img.style.transform = 'scale(1)');
-        });
-
-        /* Intersection Observer for staggered reveal */
-        const observer = new IntersectionObserver((entries) => {
-          entries.forEach((entry, i) => {
-            if (entry.isIntersecting) {
-              setTimeout(() => entry.target.style.opacity = '1', i * 60);
-              observer.unobserve(entry.target);
-            }
-          });
-        }, { threshold: 0.08 });
-
-        logosGrid.querySelectorAll('.event-logo-card').forEach((card, i) => {
-          card.style.opacity = '0';
-          card.style.transition += ', opacity 0.5s ease';
-          observer.observe(card);
-        });
-      }
-
-      /* ── Intersection Observer for artwork fade ── */
-      const artObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-            artObserver.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.15 });
-      document.querySelectorAll('.artwork').forEach(el => artObserver.observe(el));
-    });
-  </script>
-
+  <script src="assets/js/aurora.js"></script>
   <!-- ═══ VIDEO MODAL ═══ -->
   <div id="homeVideoModal" style="display:none;position:fixed;inset:0;z-index:9999" onclick="closeHomeVideoModal(event)">
     <div style="position:absolute;inset:0;background:rgba(10,10,10,0.96);backdrop-filter:blur(10px)"></div>
@@ -341,33 +209,6 @@
     </div>
   </div>
 
-  <script>
-    function openHomeVideoModal(url, title) {
-      const modal = document.getElementById('homeVideoModal');
-      document.getElementById('homeModalFrame').src = url;
-      document.getElementById('homeModalTitle').textContent = title;
-      modal.style.display = 'flex';
-      document.body.style.overflow = 'hidden';
-    }
-    function closeHomeVideoModal(event) {
-      if (event.target === event.currentTarget || event.target.tagName === 'BUTTON') {
-        const modal = document.getElementById('homeVideoModal');
-        modal.style.display = 'none';
-        document.body.style.overflow = '';
-        document.getElementById('homeModalFrame').src = '';
-      }
-    }
-    document.addEventListener('keydown', e => {
-      if (e.key === 'Escape') {
-        const modal = document.getElementById('homeVideoModal');
-        if (modal && modal.style.display !== 'none') {
-          modal.style.display = 'none';
-          document.body.style.overflow = '';
-          document.getElementById('homeModalFrame').src = '';
-        }
-      }
-    });
-  </script>
 </body>
 
 </html>
