@@ -1,4 +1,4 @@
-/**
+﻿/**
  * MAG Portfolio — THE MODEL (data.js)
  * Mohamed Adam Ghorbel — all content decoupled from HTML.
  */
@@ -24,43 +24,57 @@ const MAG_DATA = {
     {
       school: "ENET'Com Sfax", degree: "Data Engineering & Decision-making Systems (IDSD)",
       period: "Sep 2024 — Present", color: "blue",
+      logo: "assets/images/logos/enetcom.webp",
       detail: "National School of Electronics and Telecommunications of Sfax."
     },
     {
       school: "IPEIS Sfax", degree: "Preparatory Cycle — Mathematics & Physics",
       period: "Sep 2022 — 2024", color: "orange",
+      logo: "assets/images/logos/ipeis.webp",
       detail: "Sfax Preparatory Engineering Institute."
     },
   ],
 
   experience: [
     {
+      company: "OlivSoft", role: "Automation & Integration Intern", type: "Internship", statusColor: "blue",
+      date: "Jun 2026 – Aug 2026",
+      logo: "assets/images/logos/OliveSoft.webp",
+      description: "Automating the daily monitoring process for Boomi and Make integration flows using n8n. Retrieves execution logs via APIs, cross-references them with SFTP server files, and detects anomalies — failures, delays, and missing files. Includes automated daily report generation sent via Outlook and full solution documentation.",
+      stack: ["n8n", "Boomi", "Make", "REST APIs", "SFTP", "Outlook", "Workflow Automation", "Integration Monitoring"]
+    },
+    {
       company: "TALAN Tunisia", role: "AI Engineering Intern", type: "Internship", statusColor: "blue",
       date: "Jul 2025 – Aug 2025",
+      logo: "assets/images/logos/TALAN.webp",
       description: "Designed and built a legacy system modernisation solution applying reverse engineering to deconstruct and analyse obsolete software. Developed a multi-agent AI pipeline with LangChain and LangGraph.",
       stack: ["Python", "LangChain", "LangGraph", "Multi-Agent AI", "Selenium", "BeautifulSoup"]
     },
     {
       company: "Dksoft — Itech University / ForsaTaw", role: "UI/UX Design Intern", type: "Internship", statusColor: "orange",
       date: "Jun 2025 – Jul 2025",
+      logo: "assets/images/logos/DKSoft.webp",
       description: "Executed a full visual identity redesign for the ForsaTaw mobile application and the Itech University web portal. Delivered Figma UI kits and complete brand guidelines.",
       stack: ["Figma", "Adobe Photoshop", "Illustrator", "UI/UX Design", "Branding"]
     },
     {
       company: "Starwaves", role: "Part-time Graphic Designer", type: "Commercial", statusColor: "blue",
       date: "Ongoing",
+      logo: "assets/images/logos/STARWAVES.webp",
       description: "Poster and visual design work as part of an ongoing commercial engagement. Responsible for brand-consistent social media assets and promotional graphics.",
       stack: ["Adobe Photoshop", "Illustrator", "After Effects"]
     },
     {
       company: "IEEE ENETCOM SB", role: "Graphic Designer — Media & Communication", type: "Volunteering", statusColor: "orange",
       date: "Jan 2026 — Present",
+      logo: "assets/images/logos/Logo ENET_Com SB Color@4x.webp",
       description: "Spearheaded visual communication and brand identity for major events and congresses. Designed comprehensive digital campaigns, print materials, and social media assets to elevate the student branch's professional image and engagement.",
       stack: ["Photoshop", "Illustrator", "Figma", "Event Design"]
     },
     {
       company: "IEEE IES-PES ENET'Com SB Joint Chapter", role: "Webmaster", type: "Volunteering", statusColor: "orange",
       date: "Ongoing",
+      logo: "assets/images/logos/Logo IES-PES ENET_Com SBJC.webp",
       description: "Managing the web presence of the IES-PES ENET'Com Student Branch Joint Chapter.",
       stack: ["Web", "Content Management"]
     },
@@ -76,30 +90,33 @@ const MAG_DATA = {
   designWork: [
     {
       id: "forsataw", title: "ForsaTaw", client: "Dksoft · UI/UX Internship",
+      logo: "assets/images/logos/forsataw.webp",
       description: "Full visual identity redesign for the ForsaTaw mobile application — Figma UI kits, brand guidelines, and component systems.",
       tags: ["Branding", "UI/UX", "Figma", "Mobile App"], link: "https://forsataw.tn/",
       images: [
-        "assets/images/projects/forsataw/Visual Identity_updated.webp",
-        "assets/images/projects/forsataw/pdc forsa taw final.webp",
-        "assets/images/projects/forsataw/first post.webp"
+        "assets/images/work/forsataw/Visual Identity_updated.webp",
+        "assets/images/work/forsataw/pdc forsa taw final.webp",
+        "assets/images/work/forsataw/first post.webp"
       ]
     },
     {
       id: "itech-university", title: "Itech University", client: "Dksoft · UI/UX Internship",
+      logo: "assets/images/logos/ItechUni.webp",
       description: "Complete visual identity and web portal redesign for Itech University — responsive design, component library, and brand systems.",
       tags: ["Web Design", "UI/UX", "Figma", "Branding"], link: "https://www.itech-university.tn/",
       images: []
     },
     {
       id: "ska-food", title: "Ska Food Restaurant", client: "Ska · Branding Project",
+      logo: "assets/images/logos/SkaFood.webp",
       description: "Complete visual identity system including logo design, menu design, and brand guidelines for Ska Food Restaurant.",
       tags: ["Logo Design", "Menu Design", "Branding", "Print"], link: "#",
       images: [
-        "assets/images/projects/ska food/1780400965842.webp",
-        "assets/images/projects/ska food/1780401004401.webp",
-        "assets/images/projects/ska food/1780401029773.webp",
-        "assets/images/projects/ska food/Black Logo.webp",
-        "assets/images/projects/ska food/White Logo.webp"
+        "assets/images/work/ska-food/1780400965842.webp",
+        "assets/images/work/ska-food/1780401004401.webp",
+        "assets/images/work/ska-food/1780401029773.webp",
+        "assets/images/work/ska-food/Black Logo.webp",
+        "assets/images/work/ska-food/White Logo.webp"
       ]
     },
   ],
@@ -108,12 +125,14 @@ const MAG_DATA = {
     {
       id: "smart-manager", title: "Smart Manager", subtitle: "Industrial Data Lakehouse Platform",
       client: "MOMSoft · End of Year Project (PFA)", period: "Nov 2025 – Apr 2026", category: "Data Engineering", color: "blue",
+      logo: "assets/images/logos/Momsoft.webp",
       description: "Designed a Medallion Data Lakehouse (Bronze/Silver/Gold) integrating heterogeneous industrial sources — IoT, PLCs, ERP, HR. Implemented Data Vault 2.0 (Hubs, Links, Satellites) for full temporal traceability and auditability.",
       tags: ["Data Vault 2.0", "ETL", "Data Lakehouse", "SQL", "Python", "Figma"]
     },
     {
       id: "voltwise", title: "Voltwise", subtitle: "Photovoltaic Energy Prediction",
       client: "IEEE TSYP 13 · PES & YP & Spectra Challenge", period: "Oct 2025 – Dec 2025", category: "Machine Learning", color: "orange",
+      logo: "assets/images/logos/voltwise.webp",
       description: "Built a supervised XGBoost model forecasting solar energy output. Integrated a live weather API and benchmarked expected vs real energy production with a Streamlit dashboard.",
       tags: ["Python", "Machine Learning", "XGBoost", "Streamlit", "API Integration"],
       github: "https://github.com/ademghorbel/ForcastingPVProduction"
@@ -121,6 +140,7 @@ const MAG_DATA = {
     {
       id: "talan-ai", title: "Legacy System Modernisation", subtitle: "Multi-Agent AI Pipeline",
       client: "TALAN Tunisia · AI Internship", period: "Jul 2025 – Aug 2025", category: "AI Engineering", color: "blue",
+      logo: "assets/images/logos/TALAN.webp",
       description: "Designed and built a legacy system modernisation tool applying reverse engineering to analyse obsolete software. Developed a multi-agent AI pipeline with LangChain and LangGraph.",
       tags: ["LangChain", "LangGraph", "Multi-Agent AI", "Python", "Selenium"],
       github: "https://github.com/JlassiRAed/TalanProject"
@@ -128,6 +148,7 @@ const MAG_DATA = {
     {
       id: "enetcomdocs", title: "ENETCOMDocs", subtitle: "UX/UI Designer",
       client: "ENETCOM Community", period: "Sep 2025", category: "UI/UX Design", color: "blue",
+      logo: "assets/images/logos/enetdocs.webp",
       description: "UX/UI design for the ENETCOMDocs document management platform for the ENETCOM community — wireframes and final UI delivery.",
       tags: ["Figma", "UI/UX Design"],
       link: "https://enetcom-docs.vercel.app/"
