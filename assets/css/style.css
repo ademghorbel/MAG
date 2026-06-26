@@ -921,6 +921,58 @@ nav.nav--scrolled {
   white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
 }
 
+/* ── Events Index Card — flight-card style (events/index.html) ── */
+.elc-img--tall { height: 220px; }
+.eic-card {
+  display: flex; flex-direction: column;
+  text-decoration: none;
+  border: 1px solid var(--hairline);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: var(--card-bg);
+  transition: border-color 0.25s, transform 0.25s;
+}
+.eic-card:hover { border-color: var(--blue); transform: translateY(-3px); }
+.eic-card:hover .elc-img img { transform: scale(1.05); }
+.eic-body {
+  padding: 24px; flex: 1;
+  display: flex; flex-direction: column;
+}
+.eic-title {
+  font-family: var(--font-display);
+  font-size: 22px; font-weight: 800;
+  letter-spacing: -0.025em; line-height: 1.1;
+  color: var(--text); margin-bottom: 6px;
+}
+.eic-subtext {
+  font-family: var(--font-mono); font-size: 10px;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--orange); margin-bottom: 12px;
+}
+.eic-desc {
+  font-size: 13px; color: var(--text-2);
+  line-height: 1.65; margin-bottom: 16px;
+  display: -webkit-box; -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical; overflow: hidden;
+}
+.eic-bottom {
+  display: flex; align-items: center;
+  justify-content: space-between; margin-top: auto;
+}
+.eic-role {
+  font-family: var(--font-mono); font-size: 9px;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  padding: 3px 8px; border-radius: 4px;
+  background: var(--blue-ghost, rgba(59,130,246,0.12));
+  color: var(--blue);
+}
+.eic-cta {
+  font-family: var(--font-mono); font-size: 10px;
+  color: var(--blue); letter-spacing: 0.05em;
+  transition: letter-spacing 0.2s;
+}
+.eic-card:hover .eic-cta { letter-spacing: 0.1em; }
+
 /* ── Event detail hero with logo background ── */
 .page-hero--event {
   position: relative;

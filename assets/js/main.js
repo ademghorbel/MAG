@@ -376,19 +376,37 @@ const MAG_Controller = {
     const grid = document.getElementById("events-grid");
     if (!grid) return;
     grid.innerHTML = MAG_DATA.events.map(ev => `
-      <a href="${ev.link}" class="event-card card-hover" data-reveal-child>
-        <div class="ec-top-line"></div>
-        ${ev.logo ? `
-        <div class="event-card-logo">
+      <a href="${ev.link}" class="eic-card card-hover" data-reveal-child>
+        <div class="elc-img elc-img--tall">
           <img src="../${ev.logo}" alt="${ev.title} logo"
-            onerror="this.parentElement.innerHTML='<span class=\\'event-card-logo-fallback\\'>${ev.id.toUpperCase()}</span>'" />
-        </div>` : ''}
-        <div class="event-index">${ev.index} — ${String(MAG_DATA.events.length).padStart(2,"0")}</div>
-        <div class="event-title">${ev.title}</div>
-        <div class="event-subtext">${ev.subtext}</div>
-        <p class="event-desc">${ev.about ? ev.about[0] : ""}</p>
-        <span class="event-role-badge">${ev.role}</span>
-        <div class="event-cta">View details →</div>
+            onerror="this.parentElement.innerHTML='<span class=\\'elc-img-fallback\\'>${ev.id.toUpperCase()}</span>'">
+        </div>
+        <div class="eic-body">
+          <div class="elc-route">
+            <div class="elc-endpoint">
+              <p class="elc-ep-label">No.</p>
+              <p class="elc-ep-code">${ev.index}</p>
+            </div>
+            <div class="elc-mid">
+              <div class="elc-mid-connector">
+                <span class="elc-mid-line"></span>
+                <span class="elc-mid-line"></span>
+              </div>
+            </div>
+            <div class="elc-endpoint elc-endpoint--right">
+              <p class="elc-ep-label">Year</p>
+              <p class="elc-ep-code">${ev.date}</p>
+            </div>
+          </div>
+          <div class="elc-divider"></div>
+          <div class="eic-title">${ev.title}</div>
+          <div class="eic-subtext">${ev.subtext}</div>
+          <p class="eic-desc">${ev.about ? ev.about[0] : ""}</p>
+          <div class="eic-bottom">
+            <span class="eic-role">${ev.role}</span>
+            <span class="eic-cta">View details →</span>
+          </div>
+        </div>
       </a>
     `).join("");
   },
