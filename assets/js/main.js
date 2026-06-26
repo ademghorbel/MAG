@@ -134,31 +134,34 @@ const MAG_Controller = {
     const logosGrid = document.getElementById("event-logos-grid");
     if (logosGrid) {
       logosGrid.innerHTML = MAG_DATA.events.map(ev => `
-        <a href="events/${ev.id}.html" class="event-logo-card card-hover" style="display:flex;flex-direction:column;text-decoration:none;border:1px solid var(--hairline);border-radius:var(--radius-md);overflow:hidden;background:var(--card-bg);transition:border-color 0.25s,transform 0.25s"
-          onmouseover="this.style.borderColor='var(--blue)';this.style.transform='translateY(-3px)'"
-          onmouseout="this.style.borderColor='var(--hairline)';this.style.transform='translateY(0)'">
-          <div style="aspect-ratio:16/9;background:var(--surface);display:flex;align-items:center;justify-content:center;overflow:hidden;border-bottom:1px solid var(--hairline);position:relative;">
-            <img src="${ev.logo}" alt="${ev.title} logo" style="width:100%;height:100%;object-fit:contain;transition:transform 0.35s cubic-bezier(0.16,1,0.3,1)"
-              onerror="this.parentElement.innerHTML='<span style=\\'font-family:var(--font-mono);font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted)\\'>${ev.id}</span>'">
+        <a href="events/${ev.id}.html" class="event-logo-card card-hover" onmouseover="this.classList.add('elc--hover')" onmouseout="this.classList.remove('elc--hover')">
+          <div class="elc-img">
+            <img src="${ev.logo}" alt="${ev.title}"
+              onerror="this.parentElement.innerHTML='<span class=\\'elc-img-fallback\\'>${ev.id}</span>'">
           </div>
-          <div style="padding:20px 20px 18px;flex:1;display:flex;flex-direction:column;gap:8px;">
-            <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:8px;">
-              <span style="font-family:var(--font-display,var(--font-sans));font-size:15px;font-weight:700;color:var(--text);line-height:1.25;letter-spacing:-0.01em">${ev.title}</span>
-              <span style="flex-shrink:0;font-family:var(--font-mono);font-size:9px;letter-spacing:0.14em;text-transform:uppercase;padding:3px 8px;border-radius:4px;background:var(--blue-ghost,rgba(59,130,246,0.12));color:var(--blue);white-space:nowrap">${ev.type || ev.category || 'Event'}</span>
+          <div class="elc-body">
+            <div class="elc-route">
+              <div class="elc-endpoint">
+                <p class="elc-ep-label">No.</p>
+                <p class="elc-ep-code">${ev.index}</p>
+              </div>
+              <div class="elc-mid">
+                <div class="elc-mid-connector">
+                  <span class="elc-mid-line"></span>
+                  <span class="elc-mid-line"></span>
+                </div>
+              </div>
+              <div class="elc-endpoint elc-endpoint--right">
+                <p class="elc-ep-label">Year</p>
+                <p class="elc-ep-code">${ev.date}</p>
+              </div>
             </div>
-            <p style="font-size:12px;color:var(--muted);line-height:1.55;margin:0;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">${ev.subtext || ev.description || ''}</p>
-            <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:4px">
-              ${(ev.tags || []).slice(0, 4).map(t => `<span style="font-family:var(--font-mono);font-size:9px;letter-spacing:0.1em;text-transform:uppercase;padding:2px 7px;border-radius:4px;border:1px solid var(--hairline);color:var(--muted)">${t}</span>`).join('')}
-            </div>
+            <div class="elc-divider"></div>
+            <p class="elc-title">${ev.title}</p>
+            <p class="elc-role-line">${ev.role}</p>
           </div>
         </a>
       `).join('');
-
-      logosGrid.querySelectorAll('.event-logo-card img').forEach(img => {
-        const card = img.closest('.event-logo-card');
-        card.addEventListener('mouseenter', () => img.style.transform = 'scale(1.06)');
-        card.addEventListener('mouseleave', () => img.style.transform = 'scale(1)');
-      });
 
       const obs = new IntersectionObserver((entries) => {
         entries.forEach((entry, i) => {
