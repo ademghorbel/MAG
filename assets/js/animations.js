@@ -365,6 +365,30 @@ function initBarba() {
   });
 }
 
+/* ─── P. BORDER GLOW ─────────────────────────── */
+function initBorderGlow() {
+  document.querySelectorAll('.card-hover:not(.stack-card)').forEach(card => {
+    if (card.querySelector('.edge-light')) return;
+    card.classList.add('border-glow-card');
+    const el = document.createElement('span');
+    el.className = 'edge-light';
+    card.insertBefore(el, card.firstChild);
+    card.addEventListener('pointermove', (e) => {
+      const r = card.getBoundingClientRect();
+      const x = e.clientX - r.left, y = e.clientY - r.top;
+      const cx = r.width / 2, cy = r.height / 2;
+      const dx = x - cx, dy = y - cy;
+      const kx = dx ? cx / Math.abs(dx) : Infinity;
+      const ky = dy ? cy / Math.abs(dy) : Infinity;
+      const edge = Math.min(Math.max(1 / Math.min(kx, ky), 0), 1);
+      let angle = Math.atan2(dy, dx) * (180 / Math.PI) + 90;
+      if (angle < 0) angle += 360;
+      card.style.setProperty('--edge-proximity', (edge * 100).toFixed(2));
+      card.style.setProperty('--cursor-angle', `${angle.toFixed(2)}deg`);
+    });
+  });
+}
+
 /* ─── MASTER INIT ────────────────────────────── */
 function initPageAnimations() {
   if (typeof ScrollTrigger !== "undefined") {
@@ -380,4 +404,5 @@ function initPageAnimations() {
   splitAndAnimate("[data-split]");
   initTicker();
   initHorizontalScroll();
+  initBorderGlow();
 }

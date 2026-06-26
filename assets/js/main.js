@@ -104,35 +104,109 @@ const MAG_Controller = {
         </div>
       `).join("");
     }
-    // FIX: use _prefix not hardcoded "../"
-    const eventsTrack = document.getElementById("events-teaser");
-    if (eventsTrack) {
-      const first3 = MAG_DATA.events.slice(0, 3);
-      let htmlContent = first3.map(ev => `
-        <a href="${this._prefix}events/${ev.link}" class="h-scroll-card card-hover artwork" style="text-decoration:none;">
-          ${ev.logo ? `
-          <div class="h-scroll-card-logo">
-            <img src="${this._prefix}${ev.logo}" alt="${ev.title} logo"
-              onerror="this.parentElement.style.display='none'" />
-          </div>` : ''}
-          <div class="h-scroll-card-body" style="padding:28px;display:flex;flex-direction:column;height:100%;">
-            <div style="font-family:var(--font-mono);font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted);margin-bottom:12px">${ev.index} — ${String(MAG_DATA.events.length).padStart(2,"0")}</div>
-            <div class="h-scroll-card-title">${ev.title}</div>
-            <div class="h-scroll-card-sub">${ev.subtext}</div>
-            <span class="event-role-badge" style="margin-top:auto;display:inline-block;align-self:flex-start">${ev.role}</span>
+
+    const hscrollTrack = document.getElementById("hscroll-work");
+    if (hscrollTrack) {
+      let html = MAG_DATA.videos.slice(0, 3).map(v => `
+        <div class="h-scroll-card card-hover artwork" style="cursor:pointer" onclick="openHomeVideoModal('${v.url}', '${v.title.replace(/'/g, "\\'")}')">
+          <div class="h-scroll-card-img" style="background:#111;position:relative;overflow:hidden;">
+            <img src="${v.thumb || ''}" alt="${v.title}" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.4s cubic-bezier(0.16,1,0.3,1)" loading="lazy"
+              onerror="this.style.display='none'; this.parentElement.style.background='var(--card-bg)'"
+              onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'">
+            <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;pointer-events:none">
+              <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:56px;height:56px;filter:drop-shadow(0 4px 16px rgba(0,0,0,0.5));opacity:0.9">
+                <circle cx="40" cy="40" r="40" fill="rgba(0,0,0,0.55)"/>
+                <path d="M32 26L58 40L32 54V26Z" fill="white"/>
+              </svg>
+            </div>
+          </div>
+          <div class="h-scroll-card-body">
+            <div class="h-scroll-card-title">${v.title}</div>
+            <div class="h-scroll-card-sub">${v.client}</div>
+            <div class="project-tags" style="margin-top:10px">${v.tags.map(t => `<span class="tag">${t}</span>`).join("")}</div>
+          </div>
+        </div>
+      `).join("");
+      html += `<a href="videos.html" class="h-scroll-card card-hover artwork" style="display:flex;flex-direction:column;align-items:center;justify-content:center;background:var(--card-bg);text-decoration:none;"><h3 style="margin-bottom:8px;">Show more</h3><p style="color:var(--muted);font-size:14px;">View all video projects →</p></a>`;
+      hscrollTrack.innerHTML = html;
+    }
+
+    const logosGrid = document.getElementById("event-logos-grid");
+    if (logosGrid) {
+      logosGrid.innerHTML = MAG_DATA.events.map(ev => `
+        <a href="events/${ev.id}.html" class="event-logo-card card-hover" style="display:flex;flex-direction:column;text-decoration:none;border:1px solid var(--hairline);border-radius:var(--radius-md);overflow:hidden;background:var(--card-bg);transition:border-color 0.25s,transform 0.25s"
+          onmouseover="this.style.borderColor='var(--blue)';this.style.transform='translateY(-3px)'"
+          onmouseout="this.style.borderColor='var(--hairline)';this.style.transform='translateY(0)'">
+          <div style="aspect-ratio:16/9;background:var(--surface);display:flex;align-items:center;justify-content:center;overflow:hidden;border-bottom:1px solid var(--hairline);position:relative;">
+            <img src="${ev.logo}" alt="${ev.title} logo" style="width:100%;height:100%;object-fit:contain;transition:transform 0.35s cubic-bezier(0.16,1,0.3,1)"
+              onerror="this.parentElement.innerHTML='<span style=\\'font-family:var(--font-mono);font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted)\\'>${ev.id}</span>'">
+          </div>
+          <div style="padding:20px 20px 18px;flex:1;display:flex;flex-direction:column;gap:8px;">
+            <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:8px;">
+              <span style="font-family:var(--font-display,var(--font-sans));font-size:15px;font-weight:700;color:var(--text);line-height:1.25;letter-spacing:-0.01em">${ev.title}</span>
+              <span style="flex-shrink:0;font-family:var(--font-mono);font-size:9px;letter-spacing:0.14em;text-transform:uppercase;padding:3px 8px;border-radius:4px;background:var(--blue-ghost,rgba(59,130,246,0.12));color:var(--blue);white-space:nowrap">${ev.type || ev.category || 'Event'}</span>
+            </div>
+            <p style="font-size:12px;color:var(--muted);line-height:1.55;margin:0;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">${ev.subtext || ev.description || ''}</p>
+            <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:4px">
+              ${(ev.tags || []).slice(0, 4).map(t => `<span style="font-family:var(--font-mono);font-size:9px;letter-spacing:0.1em;text-transform:uppercase;padding:2px 7px;border-radius:4px;border:1px solid var(--hairline);color:var(--muted)">${t}</span>`).join('')}
+            </div>
           </div>
         </a>
-      `).join("");
+      `).join('');
 
-      htmlContent += `
-        <a href="${this._prefix}events/index.html" class="h-scroll-card card-hover artwork" style="display:flex;flex-direction:column;align-items:center;justify-content:center;background:var(--card-bg);text-decoration:none;">
-          <h3 style="margin-bottom:8px;">Show more</h3>
-          <p style="color:var(--muted);font-size:14px;">View all events →</p>
-        </a>
-      `;
+      logosGrid.querySelectorAll('.event-logo-card img').forEach(img => {
+        const card = img.closest('.event-logo-card');
+        card.addEventListener('mouseenter', () => img.style.transform = 'scale(1.06)');
+        card.addEventListener('mouseleave', () => img.style.transform = 'scale(1)');
+      });
 
-      eventsTrack.innerHTML = htmlContent;
+      const obs = new IntersectionObserver((entries) => {
+        entries.forEach((entry, i) => {
+          if (entry.isIntersecting) {
+            setTimeout(() => entry.target.style.opacity = '1', i * 60);
+            obs.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.08 });
+      logosGrid.querySelectorAll('.event-logo-card').forEach(card => {
+        card.style.opacity = '0';
+        card.style.transition += ', opacity 0.5s ease';
+        obs.observe(card);
+      });
     }
+
+    const artObs = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) { entry.target.classList.add('visible'); artObs.unobserve(entry.target); }
+      });
+    }, { threshold: 0.15 });
+    document.querySelectorAll('.artwork').forEach(el => artObs.observe(el));
+
+    window.openHomeVideoModal = function(url, title) {
+      const modal = document.getElementById('homeVideoModal');
+      document.getElementById('homeModalFrame').src = url;
+      document.getElementById('homeModalTitle').textContent = title;
+      modal.style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+    };
+    window.closeHomeVideoModal = function(event) {
+      if (event.target === event.currentTarget || event.target.tagName === 'BUTTON') {
+        const modal = document.getElementById('homeVideoModal');
+        modal.style.display = 'none';
+        document.body.style.overflow = '';
+        document.getElementById('homeModalFrame').src = '';
+      }
+    };
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') {
+        const modal = document.getElementById('homeVideoModal');
+        if (modal && modal.style.display !== 'none') {
+          modal.style.display = 'none';
+          document.body.style.overflow = '';
+          document.getElementById('homeModalFrame').src = '';
+        }
+      }
+    });
   },
 
   /* ── ABOUT ─────────────────────────────── */
@@ -189,6 +263,7 @@ const MAG_Controller = {
             subtitle: `${item.role}`,
             description: item.description,
             tags: item.stack,
+            logo: item.logo || null,
           })),
           ...MAG_DATA.education.map(item => ({
             kind: "Education",
@@ -198,15 +273,21 @@ const MAG_Controller = {
             subtitle: item.degree,
             description: item.detail,
             tags: [],
+            logo: item.logo || null,
           })),
         ];
 
         stackEl.innerHTML = timeline.map((item, index) => `
           <article class="stack-card card-hover" data-stack-card style="--stack-index:${index};--stack-accent:var(--${item.accent});">
             <div class="stack-card-topline"></div>
-            <div class="stack-card-meta">${item.kind} · ${item.meta}</div>
-            <div class="stack-card-title">${item.title}</div>
-            <div class="stack-card-subtitle">${item.subtitle}</div>
+            <div class="stack-card-head-row">
+              ${item.logo ? `<div class="stack-card-logo"><img src="${item.logo}" alt="${item.title} logo" loading="lazy"></div>` : ""}
+              <div class="stack-card-head-text">
+                <div class="stack-card-meta">${item.kind} · ${item.meta}</div>
+                <div class="stack-card-title">${item.title}</div>
+                <div class="stack-card-subtitle">${item.subtitle}</div>
+              </div>
+            </div>
             <p class="stack-card-desc">${item.description}</p>
             ${item.tags.length ? `<div class="stack-card-tags">${item.tags.map(tag => `<span class="tag">${tag}</span>`).join("")}</div>` : ""}
           </article>
@@ -221,6 +302,7 @@ const MAG_Controller = {
       listEl.innerHTML = MAG_DATA.designWork.map(p => `
         <div class="project-row" data-reveal-child style="cursor:default;">
           <div class="project-info">
+            ${p.logo ? `<div class="stack-card-logo" style="margin-bottom:14px"><img src="${p.logo}" alt="${p.title} logo" loading="lazy"></div>` : ""}
             <div class="project-title">${p.title}</div>
             <div class="project-client">${p.client}</div>
           </div>
@@ -251,10 +333,13 @@ const MAG_Controller = {
     listEl.innerHTML = MAG_DATA.techProjects.map(p => `
       <div class="tech-project-card card-hover" data-reveal>
         <div class="tp-header">
-          <div>
-            <div class="tp-category tp-category--${p.color}">${p.category}</div>
-            <div class="tp-title">${p.title}</div>
-            <div class="tp-subtitle">${p.subtitle}</div>
+          <div class="tp-head-left">
+            ${p.logo ? `<div class="stack-card-logo"><img src="${p.logo}" alt="${p.title} logo" loading="lazy"></div>` : ""}
+            <div>
+              <div class="tp-category tp-category--${p.color}">${p.category}</div>
+              <div class="tp-title">${p.title}</div>
+              <div class="tp-subtitle">${p.subtitle}</div>
+            </div>
           </div>
           <div class="tp-period">${p.period}</div>
         </div>
@@ -346,28 +431,6 @@ const MAG_Controller = {
   },
 
 };
-
-/* ── Private helpers ─────────────────── */
-function _eventTile(ev, prefix = "") {
-  return `
-    <a href="${prefix}events/${ev.link}" class="event-tile card-hover" data-reveal-child>
-      <div class="ec-top-line"></div>
-      <div class="tile-index">${ev.index} — ${String(MAG_DATA.events.length).padStart(2,"0")}</div>
-      <div class="tile-title">${ev.title}</div>
-      <div class="tile-sub">${ev.subtext}</div>
-      <span class="tile-cta">View details →</span>
-    </a>
-  `;
-}
-
-/* ─── NAV SCROLL EFFECT ─────────────── */
-function initNavScroll() {
-  const nav = document.querySelector("nav");
-  if (!nav) return;
-  const onScroll = () => nav.classList.toggle("nav--scrolled", window.scrollY > 40);
-  window.addEventListener("scroll", onScroll, { passive: true });
-  onScroll();
-}
 
 /* ─── BOOTSTRAP ─────────────────────── */
 document.addEventListener("DOMContentLoaded", () => {
