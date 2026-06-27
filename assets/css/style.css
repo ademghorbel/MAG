@@ -187,94 +187,9 @@ footer p{font-family:var(--font-mono);font-size:10px;letter-spacing:0.12em;color
 .ticker-item .dot{display:inline-block;width:4px;height:4px;background:var(--blue);border-radius:50%;margin:0 24px;vertical-align:middle}
 @keyframes ticker{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
 
-/* ── ARTWORKS GRID SECTION ── */
+/* ── ARTWORKS SECTION ── */
 .artworks-section {
   padding: 0;
-}
-
-.artworks-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.25rem;
-  max-width: 100%;
-}
-
-.artwork-item {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.artwork-item.revealed {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.artwork-thumb {
-  width: 100%;
-  aspect-ratio: 4/5;
-  border-radius: var(--radius-md);
-  overflow: hidden;
-  position: relative;
-  background: var(--surface-2);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.artwork-placeholder {
-  font-family: var(--font-mono);
-  font-size: 11px;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--hairline-2);
-  text-align: center;
-  padding: 1rem;
-}
-
-.artwork-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to top, rgba(17, 17, 17, 0.85) 0%, transparent 55%);
-  opacity: 0;
-  transition: opacity 0.35s ease;
-  display: flex;
-  align-items: flex-end;
-  padding: 1rem;
-}
-.artwork-item:hover .artwork-overlay {
-  opacity: 1;
-}
-
-.artwork-overlay-label {
-  font-size: 13px;
-  color: #fff;
-  font-weight: 500;
-  transform: translateY(8px);
-  transition: transform 0.35s ease;
-}
-.artwork-item:hover .artwork-overlay-label {
-  transform: translateY(0);
-}
-
-.artwork-meta {
-  padding: 0.75rem 0 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  gap: 1rem;
-}
-.artwork-name {
-  font-size: 14px;
-  font-weight: 500;
-  flex: 1;
-}
-.artwork-year {
-  font-family: var(--font-mono);
-  font-size: 9px;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--muted);
-  white-space: nowrap;
 }
 
 /* ── Cursor glow ── */
@@ -516,7 +431,7 @@ nav.nav--scrolled {
   border-radius: var(--radius-md);
   border: 1px solid var(--hairline);
   background: var(--surface);
-  transform: translateY(calc(var(--stack-index) * 8px)) rotateX(calc(var(--stack-index) * -1deg));
+  transform: none;
   transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
   position: relative;
   z-index: 0;
