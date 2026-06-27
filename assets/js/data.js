@@ -173,8 +173,8 @@ const MAG_DATA = {
       }
     },
     {
-      id: "cstam-3", title: "CSTAM 3.0", subtext: "Computer Society Tunisian Annual Meeting · 3rd Edition",
-      role: "Media & Communication Design", date: "2025", category: "International Congress",
+      id: "cstam-3", title: "IEEE CSTAM 3.0", subtext: "Computer Society Tunisian Annual Meeting · 3rd Edition",
+      role: "Media & Communication Design", date: "2026", category: "International Congress",
       logo: "assets/images/events/cstam-3/logo.webp",
       banner: "assets/images/events/cstam-3/you will be impressed.webp",
       link: "cstam-3.html", index: "02",
@@ -184,12 +184,12 @@ const MAG_DATA = {
         "My contributions spanned promotional graphics, social media asset packages, and physical event branding materials.",
       ],
       details: {
-        event: "Computer Society Tunisian Annual Meeting · CSTAM 3.0", edition: "3rd Edition",
+        event: "IEEE Computer Society Tunisian Annual Meeting · CSTAM 3.0", edition: "3rd Edition",
         role: "Media & Communication Design", organisation: "IEEE CS ENET'Com SBC", type: "Volunteering · Media Design"
       }
     },
     {
-      id: "trsyp-2", title: "TRSYP 2.0", subtext: "IEEE Tunisian RAS Student and Young Professional Congress · 2nd Edition",
+      id: "trsyp-2", title: "IEEE TRSYP 2.0", subtext: "IEEE Tunisian RAS Student and Young Professional Congress · 2nd Edition",
       role: "Media Leader", date: "2025", category: "Internation Competition x Congress",
       logo: "assets/images/events/trsyp-2/logo.webp",
       banner: "assets/images/events/trsyp-2/Main.webp",
@@ -200,12 +200,12 @@ const MAG_DATA = {
         "This leadership role demanded strict adherence to brand guidelines while innovating across digital campaigns and onsite print collateral.",
       ],
       details: {
-        event: "TRSYP 2.0", edition: "IEEE Tunisian RAS Student and Young Professional Congress · 2nd Edition",
+        event: "IEEE TRSYP 2.0", edition: "IEEE Tunisian RAS Student and Young Professional Congress · 2nd Edition",
         role: "Media Leader", organisation: "IEEE ENETCOM SB", type: "Volunteering · Media Lead", period: "Mar 2025 – Nov 2025"
       }
     },
     {
-      id: "ies-syp-2", title: "IES SYP Congress 2.0", subtext: "IEEE Industrial Electronics Society Students and Young Professionals Congress · 2nd Edition",
+      id: "ies-syp-2", title: "IEEE IES SYP Congress 2.0", subtext: "IEEE Industrial Electronics Society Students and Young Professionals Congress · 2nd Edition",
       role: "Media & Communication Team member", date: "2025", category: "International Congress",
       logo: "assets/images/events/ies-syp-2/logo.webp",
       banner: "assets/images/events/ies-syp-2/Thumbnail.webp",
@@ -216,14 +216,14 @@ const MAG_DATA = {
         "I developed reusable social media templates, event graphics, and digital collateral that reinforced the congress's prestige and professional character.",
       ],
       details: {
-        event: "IES SYP Congress 2.0", edition: "IEEE Industrial Electronics Society Students and Young Professionals Congress · 2nd Edition",
+        event: "IEEE IES SYP Congress 2.0", edition: "IEEE Industrial Electronics Society Students and Young Professionals Congress · 2nd Edition",
         role: "Media & Communication Team member Member", organisation: "IEEE ENETCOM SB / IEEE IES Tunisia Section Chapter",
         type: "Volunteering · Media Design", period: "Apr 2025 – Aug 2025"
       }
     },
     {
       id: "sdc-3", title: "SDC 3.0 : IEEE Sight Day Congress", subtext: "Sight Day Congress · 3rd Edition",
-      role: "Official Ambassador & Designer", date: "2024", category: "Local Congress",
+      role: "Official Ambassador & Designer", date: "Apr 2025", category: "Local Congress",
       logo: "assets/images/events/sdc-3/logo.webp",
       link: "sdc-3.html", index: "05",
       about: [
@@ -240,7 +240,7 @@ const MAG_DATA = {
       id: "xtreme-19", title: "IEEE Xtreme 19.0", subtext: "Global 24h Programming Competition",
       role: "Media & Branding Lead", date: "2025", category: "International CP Competition",
       logo: "assets/images/events/xtreme-19/logo.webp",
-      banner: "assets/images/events/xtreme-19/event-banner.webp",
+      banner: "assets/images/events/xtreme-19/reg1.webp",
       link: "xtreme-19.html", index: "06",
       about: [
         "IEEEXtreme is a prestigious global 24-hour hackathon that challenges the best coding minds across hundreds of universities worldwide.",
@@ -256,7 +256,7 @@ const MAG_DATA = {
       id: "eduvision", title: "EduVision", subtext: "IEEE Educational & Capacity Building Initiative",
       role: "Media & Communication Design Lead", date: "2025", category: "Local Initiative",
       logo: "assets/images/events/eduvision/logo.webp",
-      banner: "assets/images/events/eduvision/BANNER.webp",
+      banner: "assets/images/events/eduvision/TEASER.webp",
       link: "eduvision.html", index: "08",
       about: [
         "EduVision is an IEEE initiative focused on educational excellence and capacity building across emerging markets.",
@@ -271,7 +271,7 @@ const MAG_DATA = {
     },
     {
       id: "cshize", title: "IEEE CS SYP HIZE", subtext: "Computer Society Students and Young Professionals High Impact Zonal Events",
-      role: "Media Designer & Community Organizer", date: "2025", category: "Hacktahon and Chess Competition",
+      role: "Media Designer & Community Organizer", date: "2026", category: "Hacktahon and Chess Competition",
       logo: "assets/images/events/cshize/logo.webp",
       banner: "assets/images/events/cshize/hachathonnnn.webp",
       link: "cshize.html", index: "09",
@@ -306,10 +306,7 @@ const MAG_DATA = {
     { image: "assets/images/artworks/1st post IES DAY.webp", title: "IES DAY 1st Post", year: "IEEE IES Tunisia Section Chapter-PES" },
     { image: "assets/images/artworks/Achievement IES.webp", title: "IES Achievement", year: "IEEE IES Tunisia Section Chapter-PES" },
     { image: "assets/images/artworks/Achievement PES.webp", title: "PES Achievement", year: "IEEE IES Tunisia Section Chapter-PES" },
-    { image: "assets/images/artworks/Arduino Workshop.webp", title: "Arduino Workshop", year: "IEEE IES Tunisia Section Chapter-PES" },
-    { image: "assets/images/artworks/ElectrosparkPlanning.webp", title: "Electrospark Planning", year: "IEEE IES Tunisia Section Chapter-PES" },
     { image: "assets/images/artworks/Happy IES DAY.webp", title: "Happy IES Day", year: "IEEE IES Tunisia Section Chapter-PES" },
-    { image: "assets/images/artworks/Teaser Electrospark.webp", title: "Electrospark Teaser", year: "IEEE IES Tunisia Section Chapter-PES" },
     { image: "assets/images/artworks/Crescent Celebration.webp", title: "Crescent Celebration", year: "IEEE ENETCOM SB" },
     { image: "assets/images/artworks/Discount Membership.webp", title: "Discount Membership", year: "IEEE ENETCOM SB" },
     { image: "assets/images/artworks/EID fitr.webp", title: "Eid al Fitr", year: "IEEE ENETCOM SB" },
@@ -320,11 +317,7 @@ const MAG_DATA = {
     { image: "assets/images/artworks/Martyrs'Day.webp", title: "Martyrs' Day", year: "IEEE ENETCOM SB" },
     { image: "assets/images/artworks/ramadhan.webp", title: "Ramadan Celebration", year: "IEEE ENETCOM SB" },
     { image: "assets/images/artworks/HAPPY IEEE DAY 2025.webp", title: "HAPPY IEEE DAY 2025", year: "Design Work" },
-    { image: "assets/images/artworks/IES DAY Industrial Visit.webp", title: "IES DAY Industrial Visit", year: "Design Work" },
-    { image: "assets/images/artworks/IES DAY KickOff Event Planning1.webp", title: "IES DAY KickOff Event Planning1", year: "Design Work" },
-    { image: "assets/images/artworks/IES DAY KickOff Event Planning2.webp", title: "IES DAY KickOff Event Planning2", year: "Design Work" },
-    { image: "assets/images/artworks/ies-cover.webp", title: "ies-cover", year: "Design Work" },
-    { image: "assets/images/artworks/job connect Trial.webp", title: "Job Connect Trial", year: "Design Work" }
+    { image: "assets/images/artworks/IES DAY Industrial Visit.webp", title: "IES DAY Industrial Visit", year: "Design Work" }
   ],
 
   videos: [
