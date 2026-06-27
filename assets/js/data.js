@@ -158,7 +158,7 @@ const MAG_DATA = {
   events: [
     {
       id: "aesh", title: "AESH 2026", subtext: "AESS Sustainability Hackathon 2026",
-      role: "Media Posts Design", date: "2025", category: "International Hackathon",
+      role: "Media Posts Design", date: "2026", category: "International Hackathon",
       logo: "assets/images/events/aesh/logo.webp",
       banner: "assets/images/events/aesh/website.webp",
       link: "aesh.html", index: "01",
@@ -223,7 +223,7 @@ const MAG_DATA = {
     },
     {
       id: "sdc-3", title: "SDC 3.0 : IEEE Sight Day Congress", subtext: "Sight Day Congress · 3rd Edition",
-      role: "Official Ambassador & Designer", date: "Apr 2025", category: "Local Congress",
+      role: "Official Ambassador & Designer", date: "2025", category: "Local Congress",
       logo: "assets/images/events/sdc-3/logo.webp",
       link: "sdc-3.html", index: "05",
       about: [
@@ -254,7 +254,7 @@ const MAG_DATA = {
     },
     {
       id: "eduvision", title: "EduVision", subtext: "IEEE Educational & Capacity Building Initiative",
-      role: "Media & Communication Design Lead", date: "2025", category: "Local Initiative",
+      role: "Media & Communication Design Lead", date: "2026", category: "Local Initiative",
       logo: "assets/images/events/eduvision/logo.webp",
       banner: "assets/images/events/eduvision/TEASER.webp",
       link: "eduvision.html", index: "08",
