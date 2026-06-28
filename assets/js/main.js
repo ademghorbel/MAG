@@ -419,6 +419,7 @@ const MAG_Controller = {
     const set = (id, val) => { const el = document.getElementById(id); if (el) el.textContent = val; };
     set("event-title",   ev.title);
     set("event-eyebrow", ev.subtext);
+    document.title = `MAG · ${ev.title}`;
     // FIX: was "event-subtext" in JS but "event-subtitle" in HTML — unified to "event-subtext"
     const subEl = document.getElementById("event-subtext");
     if (subEl) subEl.textContent = ev.subtext;
