@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <rect width="200" height="200" rx="20" fill="oklch(0.08 0.014 262)"/>
+  <text x="50%" y="53%" font-family="Syne,'Arial Black',sans-serif" font-weight="800" font-size="62" text-anchor="middle" dominant-baseline="middle" style="letter-spacing:-0.02em">
+    <tspan fill="oklch(0.93 0.008 80)">MAG</tspan><tspan fill="oklch(0.62 0.21 255)">.</tspan>
+  </text>
+</svg>
