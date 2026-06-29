@@ -1393,3 +1393,26 @@ nav.nav--floating { height: 54px !important; }
   height: 100% !important;
   opacity: 0.65;
 }
+
+/* ── Theme toggle ── */
+.nav-end{display:flex;align-items:center;gap:12px}
+@media(max-width:900px){.nav-end .nav-cta{display:none}}
+.theme-toggle{background:none;border:1px solid var(--hairline-2);color:var(--muted);cursor:pointer;font-size:14px;line-height:1;padding:6px 10px;transition:color 0.2s,border-color 0.2s}
+.theme-toggle:hover{color:var(--text);border-color:var(--text-2)}
+
+/* ── Light mode ── */
+body[data-theme="light"]{
+  --bg:oklch(0.97 0.005 80);--bg-warm:oklch(0.95 0.005 80);
+  --surface:oklch(0.93 0.005 80);--surface-2:oklch(0.89 0.005 80);--surface-3:oklch(0.85 0.005 80);
+  --text:oklch(0.12 0.010 262);--text-2:oklch(0.30 0.010 262);--muted:oklch(0.52 0.008 262);
+  --hairline:oklch(0.86 0.006 262);--hairline-2:oklch(0.78 0.006 262);
+  --shadow-card:0 4px 24px oklch(0 0 0/0.08);
+  --shadow-lift:0 16px 48px oklch(0 0 0/0.12),0 0 0 1px oklch(0.62 0.21 255/0.14);
+}
+body[data-theme="light"] nav,
+body[data-theme="light"] nav.nav--scrolled,
+body[data-theme="light"] nav.nav--floating{background:oklch(0.97 0.005 80/0.92)!important}
+@media(max-width:900px){body[data-theme="light"] .nav-links{background:oklch(0.97 0.005 80/0.97)}}
+body[data-theme="light"]::after{opacity:0.08}
+body[data-theme="light"] .hero-eyebrow{color:var(--text)}
+body[data-theme="light"] .hero-eyebrow::before{background:var(--text)}
