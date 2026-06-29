@@ -116,9 +116,12 @@ function initAurora(ctn, opts = {}) {
   window.addEventListener('resize', resize, { passive: true });
   resize();
 
-  let t = 0;
+  // ponytail: pause rAF when hero is off-screen — saves full GPU cost while scrolled away
+  let t = 0, running = true;
+  new IntersectionObserver(([e]) => { running = e.isIntersecting; }, { threshold: 0 }).observe(canvas);
   (function tick() {
     requestAnimationFrame(tick);
+    if (!running) return;
     t += 0.01;
     gl.uniform1f(uTime, t * speed);
     gl.clear(gl.COLOR_BUFFER_BIT);
