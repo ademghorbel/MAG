@@ -159,23 +159,21 @@ function initCounters() {
 /* ─── G. 3D CARD TILT ────────────────────────── */
 function initCardTilt() {
   document.querySelectorAll(".card-tilt").forEach((card) => {
+    let pending = false;
     card.addEventListener("mousemove", (e) => {
-      const rect = card.getBoundingClientRect();
-      const x = (e.clientX - rect.left) / rect.width  - 0.5;
-      const y = (e.clientY - rect.top)  / rect.height - 0.5;
-      gsap.to(card, {
-        rotationY: x * 10,
-        rotationX: -y * 10,
-        transformPerspective: 800,
-        ease: "power2.out",
-        duration: 0.3,
+      if (pending) return;
+      pending = true;
+      // ponytail: rAF throttle stops getBoundingClientRect layout thrash on every mousemove
+      requestAnimationFrame(() => {
+        const rect = card.getBoundingClientRect();
+        const x = (e.clientX - rect.left) / rect.width  - 0.5;
+        const y = (e.clientY - rect.top)  / rect.height - 0.5;
+        gsap.to(card, { rotationY: x * 10, rotationX: -y * 10, transformPerspective: 800, ease: "power2.out", duration: 0.3 });
+        pending = false;
       });
     });
     card.addEventListener("mouseleave", () => {
-      gsap.to(card, {
-        rotationY: 0, rotationX: 0,
-        duration: 0.7, ease: "elastic.out(1, 0.45)",
-      });
+      gsap.to(card, { rotationY: 0, rotationX: 0, duration: 0.7, ease: "elastic.out(1, 0.45)" });
     });
   });
 }
@@ -229,22 +227,18 @@ function initMagneticButtons() {
 function initCursorGlow() {
   const glow = document.querySelector(".cursor-glow");
   if (!glow) return;
-  let mx = window.innerWidth/2, my = window.innerHeight/2, gx = mx, gy = my;
+  // ponytail: CSS transition replaces the lerp rAF loop — one fewer 60fps tick
+  glow.style.willChange = "transform";
+  glow.style.transition = "width 0.2s, height 0.2s, background 0.2s";
   window.addEventListener("mousemove", (e) => {
-    mx = e.clientX; my = e.clientY;
     const hov = e.target.closest("a, button, [data-magnetic], .card-hover, .card-tilt");
     glow.style.background = hov
       ? "radial-gradient(circle, oklch(0.70 0.17 42 / 0.15) 0%, transparent 60%)"
       : "radial-gradient(circle, oklch(0.62 0.21 255 / 0.11) 0%, transparent 60%)";
     glow.style.width  = hov ? "500px" : "380px";
     glow.style.height = hov ? "500px" : "380px";
+    glow.style.transform = `translate(${e.clientX}px,${e.clientY}px) translate(-50%,-50%)`;
   });
-  (function tick() {
-    gx += (mx - gx) * 0.1;
-    gy += (my - gy) * 0.1;
-    glow.style.transform = `translate(${gx}px,${gy}px) translate(-50%,-50%)`;
-    requestAnimationFrame(tick);
-  })();
 }
 
 /* ─── K. TICKER ──────────────────────────────── */
@@ -374,17 +368,21 @@ function initBorderGlow() {
     el.className = 'edge-light';
     card.insertBefore(el, card.firstChild);
     card.addEventListener('pointermove', (e) => {
-      const r = card.getBoundingClientRect();
-      const x = e.clientX - r.left, y = e.clientY - r.top;
-      const cx = r.width / 2, cy = r.height / 2;
-      const dx = x - cx, dy = y - cy;
-      const kx = dx ? cx / Math.abs(dx) : Infinity;
-      const ky = dy ? cy / Math.abs(dy) : Infinity;
-      const edge = Math.min(Math.max(1 / Math.min(kx, ky), 0), 1);
-      let angle = Math.atan2(dy, dx) * (180 / Math.PI) + 90;
-      if (angle < 0) angle += 360;
-      card.style.setProperty('--edge-proximity', (edge * 100).toFixed(2));
-      card.style.setProperty('--cursor-angle', `${angle.toFixed(2)}deg`);
+      if (card._bp) return; card._bp = true;
+      requestAnimationFrame(() => {
+        const r = card.getBoundingClientRect();
+        const x = e.clientX - r.left, y = e.clientY - r.top;
+        const cx = r.width / 2, cy = r.height / 2;
+        const dx = x - cx, dy = y - cy;
+        const kx = dx ? cx / Math.abs(dx) : Infinity;
+        const ky = dy ? cy / Math.abs(dy) : Infinity;
+        const edge = Math.min(Math.max(1 / Math.min(kx, ky), 0), 1);
+        let angle = Math.atan2(dy, dx) * (180 / Math.PI) + 90;
+        if (angle < 0) angle += 360;
+        card.style.setProperty('--edge-proximity', (edge * 100).toFixed(2));
+        card.style.setProperty('--cursor-angle', `${angle.toFixed(2)}deg`);
+        card._bp = false;
+      });
     });
   });
 }
