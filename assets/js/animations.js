@@ -227,16 +227,9 @@ function initMagneticButtons() {
 function initCursorGlow() {
   const glow = document.querySelector(".cursor-glow");
   if (!glow) return;
-  // ponytail: CSS transition replaces the lerp rAF loop — one fewer 60fps tick
+  // ponytail: transform-only update = compositor only, zero repaints
   glow.style.willChange = "transform";
-  glow.style.transition = "width 0.2s, height 0.2s, background 0.2s";
   window.addEventListener("mousemove", (e) => {
-    const hov = e.target.closest("a, button, [data-magnetic], .card-hover, .card-tilt");
-    glow.style.background = hov
-      ? "radial-gradient(circle, oklch(0.70 0.17 42 / 0.15) 0%, transparent 60%)"
-      : "radial-gradient(circle, oklch(0.62 0.21 255 / 0.11) 0%, transparent 60%)";
-    glow.style.width  = hov ? "500px" : "380px";
-    glow.style.height = hov ? "500px" : "380px";
     glow.style.transform = `translate(${e.clientX}px,${e.clientY}px) translate(-50%,-50%)`;
   });
 }
