@@ -467,8 +467,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (typeof gsap !== "undefined") {
     if (typeof ScrollTrigger !== "undefined") gsap.registerPlugin(ScrollTrigger);
-    initCursorGlow();
-    initMagneticButtons();
     initPageAnimations();
   } else {
     document.querySelectorAll("[data-reveal],[data-reveal-child]").forEach(el => el.classList.add("in"));

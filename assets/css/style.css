@@ -144,7 +144,6 @@ footer p{font-family:var(--font-mono);font-size:10px;letter-spacing:0.12em;color
 }
 
 /* ── Cursor glow ── */
-.cursor-glow{position:fixed;top:0;left:0;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,oklch(0.62 0.21 255/0.12) 0%,transparent 60%);pointer-events:none;z-index:9998;transform:translate(-50%,-50%);will-change:transform}
 
 /* ── Animations (CSS fallback) ── */
 @keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
@@ -968,17 +967,6 @@ nav.nav--scrolled {
    Loader · Counters · Horizontal scroll
 ═══════════════════════════════════════════════════════════ */
 
-/* ── Cursor glow upgrade ── */
-.cursor-glow {
-  position: fixed; inset: auto;
-  pointer-events: none; z-index: 0;
-  width: 380px; height: 380px;
-  border-radius: 50%;
-  background: radial-gradient(circle, oklch(0.62 0.21 255 / 0.11) 0%, transparent 60%);
-  transition: width 0.4s, height 0.4s, background 0.3s;
-  will-change: transform;
-  top: 0; left: 0;
-}
 
 /* ═══════════════════════════════
    FLOATING PILL NAVBAR (override)
@@ -1387,33 +1375,6 @@ nav.nav--floating { height: 54px !important; }
    BORDER GLOW (adapted from React Bits)
    Directional inset glow — z-index:1 + mix-blend-mode avoids overflow-clip issues
 ═══════════════════════════════ */
-.border-glow-card {
-  --edge-proximity: 0;
-  --cursor-angle: 45deg;
-  position: relative;
-}
-.border-glow-card > .edge-light {
-  position: absolute;
-  inset: 0;
-  border-radius: inherit;
-  pointer-events: none;
-  z-index: 1;
-  mix-blend-mode: plus-lighter;
-  mask-image: conic-gradient(
-    from var(--cursor-angle) at center,
-    black 2%, transparent 13%, transparent 87%, black 98%
-  );
-  box-shadow:
-    inset 0 0 0 1px oklch(0.62 0.21 255 / 0.9),
-    inset 0 0 12px oklch(0.62 0.21 255 / 0.45),
-    inset 0 0 28px oklch(0.62 0.21 255 / 0.2);
-  opacity: clamp(0, calc((var(--edge-proximity) - 20) / 80), 1);
-  transition: opacity 0.12s ease-out;
-}
-.border-glow-card:not(:hover) > .edge-light {
-  opacity: 0;
-  transition: opacity 0.28s ease-in-out;
-}
 
 /* ═══════════════════════════════
    AURORA BACKGROUND

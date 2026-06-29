@@ -201,38 +201,7 @@ function initParallax() {
   }
 }
 
-/* ─── I. MAGNETIC BUTTONS ────────────────────── */
-function initMagneticButtons() {
-  document.querySelectorAll("[data-magnetic]").forEach((btn) => {
-    const radius = parseInt(btn.dataset.magnetic) || 50;
-    btn.addEventListener("mousemove", (e) => {
-      const rect = btn.getBoundingClientRect();
-      const cx = rect.left + rect.width  / 2;
-      const cy = rect.top  + rect.height / 2;
-      const dx = e.clientX - cx;
-      const dy = e.clientY - cy;
-      const dist = Math.sqrt(dx*dx + dy*dy);
-      if (dist < radius) {
-        const pull = (1 - dist / radius) * 0.38;
-        gsap.to(btn, { x: dx*pull, y: dy*pull, duration: 0.3, ease: "power2.out" });
-      }
-    });
-    btn.addEventListener("mouseleave", () => {
-      gsap.to(btn, { x: 0, y: 0, duration: 0.55, ease: "elastic.out(1, 0.4)" });
-    });
-  });
-}
 
-/* ─── J. CURSOR GLOW ─────────────────────────── */
-function initCursorGlow() {
-  const glow = document.querySelector(".cursor-glow");
-  if (!glow) return;
-  // ponytail: transform-only update = compositor only, zero repaints
-  glow.style.willChange = "transform";
-  window.addEventListener("mousemove", (e) => {
-    glow.style.transform = `translate(${e.clientX}px,${e.clientY}px) translate(-50%,-50%)`;
-  });
-}
 
 /* ─── K. TICKER ──────────────────────────────── */
 function initTicker() {
@@ -352,33 +321,6 @@ function initBarba() {
   });
 }
 
-/* ─── P. BORDER GLOW ─────────────────────────── */
-function initBorderGlow() {
-  document.querySelectorAll('.card-hover:not(.stack-card)').forEach(card => {
-    if (card.querySelector('.edge-light')) return;
-    card.classList.add('border-glow-card');
-    const el = document.createElement('span');
-    el.className = 'edge-light';
-    card.insertBefore(el, card.firstChild);
-    card.addEventListener('pointermove', (e) => {
-      if (card._bp) return; card._bp = true;
-      requestAnimationFrame(() => {
-        const r = card.getBoundingClientRect();
-        const x = e.clientX - r.left, y = e.clientY - r.top;
-        const cx = r.width / 2, cy = r.height / 2;
-        const dx = x - cx, dy = y - cy;
-        const kx = dx ? cx / Math.abs(dx) : Infinity;
-        const ky = dy ? cy / Math.abs(dy) : Infinity;
-        const edge = Math.min(Math.max(1 / Math.min(kx, ky), 0), 1);
-        let angle = Math.atan2(dy, dx) * (180 / Math.PI) + 90;
-        if (angle < 0) angle += 360;
-        card.style.setProperty('--edge-proximity', (edge * 100).toFixed(2));
-        card.style.setProperty('--cursor-angle', `${angle.toFixed(2)}deg`);
-        card._bp = false;
-      });
-    });
-  });
-}
 
 /* ─── MASTER INIT ────────────────────────────── */
 function initPageAnimations() {
@@ -395,5 +337,4 @@ function initPageAnimations() {
   splitAndAnimate("[data-split]");
   initTicker();
   initHorizontalScroll();
-  initBorderGlow();
 }
