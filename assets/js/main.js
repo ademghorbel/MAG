@@ -14,9 +14,6 @@ const MAG_Controller = {
     if (!nav) return;
     nav.innerHTML = `
       <a href="${rootPrefix}index.html" class="nav-logo">MAG<span>.</span></a>
-      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
       <ul class="nav-links" id="nav-links" role="list">
         <li><a href="${rootPrefix}index.html">Home</a></li>
         <li><a href="${rootPrefix}about.html">About</a></li>
@@ -24,7 +21,13 @@ const MAG_Controller = {
         <li><a href="${rootPrefix}projects.html">Projects</a></li>
         <li><a href="${rootPrefix}events/index.html">Volunteering</a></li>
       </ul>
-      <a href="${rootPrefix}contact.html" class="nav-cta" data-magnetic="60">Get in touch</a>
+      <div class="nav-end">
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">☀</button>
+        <a href="${rootPrefix}contact.html" class="nav-cta" data-magnetic="60">Get in touch</a>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     `;
     const toggle = nav.querySelector("#nav-toggle");
     const links  = nav.querySelector("#nav-links");
@@ -32,10 +35,8 @@ const MAG_Controller = {
       const open = links.classList.toggle("open");
       toggle.classList.toggle("open", open);
       toggle.setAttribute("aria-expanded", open);
-      // prevent body scroll when menu is open
       document.body.style.overflow = open ? "hidden" : "";
     });
-    // Close menu on link click
     links?.querySelectorAll("a").forEach(a => {
       a.addEventListener("click", () => {
         links.classList.remove("open");
@@ -43,6 +44,17 @@ const MAG_Controller = {
         toggle?.setAttribute("aria-expanded", "false");
         document.body.style.overflow = "";
       });
+    });
+    // theme toggle
+    const themeBtn = nav.querySelector("#theme-toggle");
+    if (localStorage.getItem("mag-theme") === "light") document.body.dataset.theme = "light";
+    const syncIcon = () => { themeBtn.textContent = document.body.dataset.theme === "light" ? "☾" : "☀"; };
+    syncIcon();
+    themeBtn.addEventListener("click", () => {
+      const next = document.body.dataset.theme === "light" ? "" : "light";
+      document.body.dataset.theme = next;
+      localStorage.setItem("mag-theme", next);
+      syncIcon();
     });
     this.setActiveNav();
   },
