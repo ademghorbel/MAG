@@ -176,7 +176,7 @@ const MAG_DATA = {
       id: "cstam-3", title: "IEEE CSTAM 3.0", subtext: "Computer Society Tunisian Annual Meeting · 3rd Edition",
       role: "Media & Communication Design", date: "2026", category: "International Congress",
       logo: "assets/images/events/cstam-3/logo.webp",
-      banner: "assets/images/events/cstam-3/you will be impressed.webp",
+      banner: "assets/images/events/cstam-3/reveal 1.webp",
       link: "cstam-3.html", index: "02",
       about: [
         "CSTAM 3.0 — the Computer Society Tunisian Annual Meeting (3rd Edition) — is a premier technical conference bridging the gap between academia and industry for engineering students.",
