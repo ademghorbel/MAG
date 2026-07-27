@@ -291,7 +291,7 @@ const MAG_DATA = {
   overviewCards: [
     {
       label: "Currently Studying", title: "ENET'Com Sfax", sub: "Data Engineering & AI Systems",
-      badge: "2nd Year", badgeColor: "blue"
+      badge: "3rd Year", badgeColor: "blue"
     },
     { label: "Part-time Role", title: "Starwaves", sub: "Graphic Designer", badge: "Active", badgeColor: "blue" },
     {
