@@ -13,7 +13,19 @@ the result isn't print-usable.
 pip install -r tools/requirements.txt
 ```
 
-## Usage
+## GUI (recommended if the CLI is fiddly)
+
+Double-click `tools/Watermark Tool.bat` — no terminal needed. Pick the image,
+the mark, and where to save with file dialogs, adjust opacity/tiles/angle with
+sliders, click "Watermark it". It's the same `watermark()` function as the CLI,
+just wrapped in a window.
+
+Run it directly instead of the `.bat` if you prefer:
+```
+python tools/watermark_gui.py
+```
+
+## Usage (CLI)
 
 ```
 python tools/watermark.py <input-image> -o <output-path>
@@ -34,7 +46,7 @@ as the mark, 0.16 opacity, ~4.5 tiles across, 30° angle, downscaled to max
 1. Point at any image file (PNG/JPG, any size — large source files are fine,
    they get downscaled at the end):
    ```
-   python tools/watermark.py "path\to\some-banner.png" -o "path\to\some-banner-wm.jpg"
+   python tools/watermark.py "C:\Users\GIGABYTE\Downloads\Mohamed Abdelhedi\Asset 1.png" -o "C:\Users\GIGABYTE\Downloads\Mohamed Abdelhedi\Asset 1wm.jpg"
    ```
 2. Open the output. Check the mark reads clearly but doesn't fight the
    artwork. If it's too strong/weak or too sparse/dense, adjust:
