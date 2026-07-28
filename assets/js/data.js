@@ -316,14 +316,14 @@ const MAG_DATA = {
     { image: "assets/images/artworks/Labour Day.webp", title: "Labour Day", year: "IEEE ENETCOM SB" },
     { image: "assets/images/artworks/Martyrs'Day.webp", title: "Martyrs' Day", year: "IEEE ENETCOM SB" },
     { image: "assets/images/artworks/ramadhan.webp", title: "Ramadan Celebration", year: "IEEE ENETCOM SB" },
-    { image: "assets/images/artworks/HAPPY IEEE DAY 2025.webp", title: "HAPPY IEEE DAY 2025", year: "Design Work" },
+    { image: "assets/images/artworks/HAPPY IEEE DAY 2025.webp", title: "Happy IEEE Day 2025", year: "Design Work" },
     { image: "assets/images/artworks/IES DAY Industrial Visit.webp", title: "IES DAY Industrial Visit", year: "Design Work" },
-    { image: "assets/images/artworks/republic day.webp", title: "Republic Day", year: "IEEE ENETCOM SB" },
+    { image: "assets/images/artworks/republic day.webp", title: "Happy Republic Day", year: "IEEE ENETCOM SB" },
     { image: "assets/images/artworks/uniexpo.webp", title: "UnivExpo Booth", year: "IEEE ENETCOM SB" },
     { image: "assets/images/artworks/1etencommence.webp", title: "Confusion Is Not Failure", year: "ENET'Commence" },
     { image: "assets/images/artworks/2etencommence.webp", title: "ENET'Commence Is Live", year: "ENET'Commence" },
-    { image: "assets/images/artworks/1-templatewhatsnext.webp", title: "What's Next? Radio Feature", year: "IEEE ESPRIT & ENET'Com SB" },
-    { image: "assets/images/artworks/resechedule.webp", title: "What's Next? Reschedule", year: "IEEE ESPRIT & ENET'Com SB" }
+    { image: "assets/images/artworks/1-templatewhatsnext.webp", title: "Hear Us on Radio Sfax", year: "IEEE ESPRIT & ENET'Com SB" },
+    { image: "assets/images/artworks/resechedule.webp", title: "New Date for What's Next?", year: "IEEE ESPRIT & ENET'Com SB" }
   ],
 
   videos: [
