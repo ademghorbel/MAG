@@ -24,6 +24,11 @@ def apply_opacity(tile: Image.Image, opacity: float) -> Image.Image:
 def build_tiled_layer(tile: Image.Image, canvas_size: int, angle: float) -> Image.Image:
     """Brick-offset tile across an oversized square, then rotate so a corner
     crop of the final image still carries the mark."""
+    # Tiles never overlap (row/column spacing == tile size), and the canvas
+    # starts fully transparent, so a plain paste is a correct raw copy of
+    # each tile's pixels. Passing `tile` as its own mask would double-apply
+    # its alpha (paste blends mask*mask/255 into a transparent destination),
+    # crushing an intended 0.16 opacity down to roughly 0.024.
     tile_w, tile_h = tile.size
     layer = Image.new("RGBA", (canvas_size, canvas_size), (0, 0, 0, 0))
     row = 0
@@ -32,7 +37,7 @@ def build_tiled_layer(tile: Image.Image, canvas_size: int, angle: float) -> Imag
         x_offset = (tile_w // 2) if row % 2 else 0
         x = -tile_w - x_offset
         while x < canvas_size:
-            layer.paste(tile, (x, y), tile)
+            layer.paste(tile, (x, y))
             x += tile_w
         y += tile_h
         row += 1
