@@ -23,13 +23,13 @@ const MAG_DATA = {
   education: [
     {
       school: "ENET'Com Sfax", degree: "Data Engineering & Decision-making Systems (IDSD)",
-      period: "Sep 2024 — Present", color: "blue",
+      period: "Sep 2024 – Present", color: "blue",
       logo: "assets/images/logos/enetcom.webp",
       detail: "National School of Electronics and Telecommunications of Sfax."
     },
     {
-      school: "IPEIS Sfax", degree: "Preparatory Cycle — Mathematics & Physics",
-      period: "Sep 2022 — 2024", color: "orange",
+      school: "IPEIS Sfax", degree: "Preparatory Cycle · Mathematics & Physics",
+      period: "Sep 2022 – 2024", color: "orange",
       logo: "assets/images/logos/ipeis.webp",
       detail: "Sfax Preparatory Engineering Institute."
     },
@@ -40,7 +40,7 @@ const MAG_DATA = {
       company: "OlivSoft", role: "Automation & Integration Intern", type: "Internship", statusColor: "blue",
       date: "Jun 2026 – Aug 2026",
       logo: "assets/images/logos/OliveSoft.webp",
-      description: "Automating the daily monitoring process for Boomi and Make integration flows using n8n. Retrieves execution logs via APIs, cross-references them with SFTP server files, and detects anomalies — failures, delays, and missing files. Includes automated daily report generation sent via Outlook and full solution documentation.",
+      description: "Automating the daily monitoring process for Boomi and Make integration flows using n8n. Retrieves execution logs via APIs, cross-references them with SFTP server files, and detects anomalies such as failures, delays, and missing files. Includes automated daily report generation sent via Outlook and full solution documentation.",
       stack: ["n8n", "Boomi", "Make", "REST APIs", "SFTP", "Outlook", "Workflow Automation", "Integration Monitoring"]
     },
     {
@@ -51,7 +51,7 @@ const MAG_DATA = {
       stack: ["Python", "LangChain", "LangGraph", "Multi-Agent AI", "Selenium", "BeautifulSoup"]
     },
     {
-      company: "Dksoft — Itech University / ForsaTaw", role: "UI/UX Design Intern", type: "Internship", statusColor: "orange",
+      company: "Dksoft · Itech University / ForsaTaw", role: "UI/UX Design Intern", type: "Internship", statusColor: "orange",
       date: "Jun 2025 – Jul 2025",
       logo: "assets/images/logos/DKSoft.webp",
       description: "Executed a full visual identity redesign for the ForsaTaw mobile application and the Itech University web portal. Delivered Figma UI kits and complete brand guidelines.",
@@ -65,8 +65,8 @@ const MAG_DATA = {
       stack: ["Adobe Photoshop", "Illustrator", "After Effects"]
     },
     {
-      company: "IEEE ENETCOM SB", role: "Graphic Designer — Media & Communication", type: "Volunteering", statusColor: "orange",
-      date: "Jan 2026 — Present",
+      company: "IEEE ENETCOM SB", role: "Graphic Designer · Media & Communication", type: "Volunteering", statusColor: "orange",
+      date: "Jan 2026 – Present",
       logo: "assets/images/logos/Logo ENET_Com SB Color@4x.webp",
       description: "Spearheaded visual communication and brand identity for major events and congresses. Designed comprehensive digital campaigns, print materials, and social media assets to elevate the student branch's professional image and engagement.",
       stack: ["Photoshop", "Illustrator", "Figma", "Event Design"]
@@ -91,7 +91,7 @@ const MAG_DATA = {
     {
       id: "forsataw", title: "ForsaTaw", client: "Dksoft · UI/UX Internship",
       logo: "assets/images/logos/forsataw.webp",
-      description: "Full visual identity redesign for the ForsaTaw mobile application — Figma UI kits, brand guidelines, and component systems.",
+      description: "Full visual identity redesign for the ForsaTaw mobile application: Figma UI kits, brand guidelines, and component systems.",
       tags: ["Branding", "UI/UX", "Figma", "Mobile App"], link: "https://forsataw.tn/",
       images: [
         "assets/images/work/forsataw/Visual Identity_updated.webp",
@@ -102,7 +102,7 @@ const MAG_DATA = {
     {
       id: "itech-university", title: "Itech University", client: "Dksoft · UI/UX Internship",
       logo: "assets/images/logos/ItechUni.webp",
-      description: "Complete visual identity and web portal redesign for Itech University — responsive design, component library, and brand systems.",
+      description: "Complete visual identity and web portal redesign for Itech University: responsive design, component library, and brand systems.",
       tags: ["Web Design", "UI/UX", "Figma", "Branding"], link: "https://www.itech-university.tn/",
       images: []
     },
@@ -126,7 +126,7 @@ const MAG_DATA = {
       id: "smart-manager", title: "Smart Manager", subtitle: "Industrial Data Lakehouse Platform",
       client: "MOMSoft · End of Year Project (PFA)", period: "Nov 2025 – Apr 2026", category: "Data Engineering", color: "blue",
       logo: "assets/images/logos/Momsoft.webp",
-      description: "Designed a Medallion Data Lakehouse (Bronze/Silver/Gold) integrating heterogeneous industrial sources — IoT, PLCs, ERP, HR. Implemented Data Vault 2.0 (Hubs, Links, Satellites) for full temporal traceability and auditability.",
+      description: "Designed a Medallion Data Lakehouse (Bronze/Silver/Gold) integrating heterogeneous industrial sources: IoT, PLCs, ERP, HR. Implemented Data Vault 2.0 (Hubs, Links, Satellites) for full temporal traceability and auditability.",
       tags: ["Data Vault 2.0", "ETL", "Data Lakehouse", "SQL", "Python", "Figma"]
     },
     {
@@ -149,7 +149,7 @@ const MAG_DATA = {
       id: "enetcomdocs", title: "ENETCOMDocs", subtitle: "UX/UI Designer",
       client: "ENETCOM Community", period: "Sep 2025", category: "UI/UX Design", color: "blue",
       logo: "assets/images/logos/enetdocs.webp",
-      description: "UX/UI design for the ENETCOMDocs document management platform for the ENETCOM community — wireframes and final UI delivery.",
+      description: "UX/UI design for the ENETCOMDocs document management platform for the ENETCOM community: wireframes and final UI delivery.",
       tags: ["Figma", "UI/UX Design"],
       link: "https://enetcom-docs.vercel.app/"
     },
@@ -179,7 +179,7 @@ const MAG_DATA = {
       banner: "assets/images/events/cstam-3/reveal 1.webp",
       link: "cstam-3.html", index: "02",
       about: [
-        "CSTAM 3.0 — the Computer Society Tunisian Annual Meeting (3rd Edition) — is a premier technical conference bridging the gap between academia and industry for engineering students.",
+        "CSTAM 3.0, the Computer Society Tunisian Annual Meeting (3rd Edition), is a premier technical conference bridging the gap between academia and industry for engineering students.",
         "I spearheaded the comprehensive media and visual communication strategy, crafting an identity that resonated with both students and corporate sponsors.",
         "My contributions spanned promotional graphics, social media asset packages, and physical event branding materials.",
       ],
@@ -195,7 +195,7 @@ const MAG_DATA = {
       banner: "assets/images/events/trsyp-2/Main.webp",
       link: "trsyp-2.html", index: "03",
       about: [
-        "TRSYP 2.0 — the IEEE Tunisian RAS Student and Young Professional Congress (2nd Edition) — is a cornerstone event uniting student professionals across the IEEE Tunisia Section, marking a significant leap in regional collaboration.",
+        "TRSYP 2.0, the IEEE Tunisian RAS Student and Young Professional Congress (2nd Edition), is a cornerstone event uniting student professionals across the IEEE Tunisia Section, marking a significant leap in regional collaboration.",
         "As Media Leader, I directed the full visual communication output. I managed a design pipeline from initial briefing to final delivery, ensuring every digital and print asset aligned with the congress's ambitious vision.",
         "This leadership role demanded strict adherence to brand guidelines while innovating across digital campaigns and onsite print collateral.",
       ],
@@ -211,7 +211,7 @@ const MAG_DATA = {
       banner: "assets/images/events/ies-syp-2/Thumbnail.webp",
       link: "ies-syp-2.html", index: "04",
       about: [
-        "IES SYP Congress 2.0 — the IEEE Industrial Electronics Society Students and Young Professionals Congress (2nd Edition) — provides an international platform for industrial electronics students and young professionals to network and share innovations.",
+        "IES SYP Congress 2.0, the IEEE Industrial Electronics Society Students and Young Professionals Congress (2nd Edition), provides an international platform for industrial electronics students and young professionals to network and share innovations.",
         "As a core member of the Media & Communication Team member, I designed dynamic promotional materials tailored to a highly technical audience.",
         "I developed reusable social media templates, event graphics, and digital collateral that reinforced the congress's prestige and professional character.",
       ],
@@ -260,7 +260,7 @@ const MAG_DATA = {
       link: "eduvision.html", index: "08",
       about: [
         "EduVision is an IEEE initiative focused on educational excellence and capacity building across emerging markets.",
-        "As Media & Communication Design Lead, I crafted the complete visual strategy — establishing brand identity, designing promotional materials, and creating a cohesive multimedia presence.",
+        "As Media & Communication Design Lead, I crafted the complete visual strategy: establishing brand identity, designing promotional materials, and creating a cohesive multimedia presence.",
         "The initiative showcased keynote speakers from industry leaders, interactive workshops, and skill-building sessions.",
         "My design work spanned digital platforms (teaser videos, social content, gateway materials) and printed collateral, ensuring consistent messaging across all touchpoints.",
       ],
@@ -276,8 +276,8 @@ const MAG_DATA = {
       banner: "assets/images/events/cshize/hachathonnnn.webp",
       link: "cshize.html", index: "09",
       about: [
-        "IEEE CS SYP HIZE — the Computer Society Students and Young Professionals High Impact Zonal Events — is a grassroots initiative designed to inspire youth in tech. The event features hackathons, technical workshops, and community engagement booths.",
-        "I contributed as Media Designer & Community Organizer — creating all visual communication assets, managing booth presence, and coordinating event social media.",
+        "IEEE CS SYP HIZE, the Computer Society Students and Young Professionals High Impact Zonal Events, is a grassroots initiative designed to inspire youth in tech. The event features hackathons, technical workshops, and community engagement booths.",
+        "I contributed as Media Designer & Community Organizer, creating all visual communication assets, managing booth presence, and coordinating event social media.",
         "The event attracted participants from local schools and universities, promoting awareness in cybersecurity careers and hands-on technical learning.",
         "My design work included competition posters, booth materials, social media content packs, and post-event documentation.",
       ],
@@ -317,7 +317,13 @@ const MAG_DATA = {
     { image: "assets/images/artworks/Martyrs'Day.webp", title: "Martyrs' Day", year: "IEEE ENETCOM SB" },
     { image: "assets/images/artworks/ramadhan.webp", title: "Ramadan Celebration", year: "IEEE ENETCOM SB" },
     { image: "assets/images/artworks/HAPPY IEEE DAY 2025.webp", title: "HAPPY IEEE DAY 2025", year: "Design Work" },
-    { image: "assets/images/artworks/IES DAY Industrial Visit.webp", title: "IES DAY Industrial Visit", year: "Design Work" }
+    { image: "assets/images/artworks/IES DAY Industrial Visit.webp", title: "IES DAY Industrial Visit", year: "Design Work" },
+    { image: "assets/images/artworks/republic day.webp", title: "Republic Day", year: "IEEE ENETCOM SB" },
+    { image: "assets/images/artworks/uniexpo.webp", title: "UnivExpo Booth", year: "IEEE ENETCOM SB" },
+    { image: "assets/images/artworks/1etencommence.webp", title: "Confusion Is Not Failure", year: "ENET'Commence" },
+    { image: "assets/images/artworks/2etencommence.webp", title: "ENET'Commence Is Live", year: "ENET'Commence" },
+    { image: "assets/images/artworks/1-templatewhatsnext.webp", title: "What's Next? Radio Feature", year: "IEEE ESPRIT & ENET'Com SB" },
+    { image: "assets/images/artworks/resechedule.webp", title: "What's Next? Reschedule", year: "IEEE ESPRIT & ENET'Com SB" }
   ],
 
   videos: [
