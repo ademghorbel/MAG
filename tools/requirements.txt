@@ -1,2 +1,2 @@
-cairosvg
+resvg_py
 pillow

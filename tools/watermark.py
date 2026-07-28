@@ -6,13 +6,13 @@ import argparse
 import io
 import math
 
-import cairosvg
+import resvg_py
 from PIL import Image
 
 
 def render_watermark_tile(svg_path: str, tile_px: int) -> Image.Image:
-    png_bytes = cairosvg.svg2png(url=svg_path, output_width=tile_px)
-    return Image.open(io.BytesIO(png_bytes)).convert("RGBA")
+    png_bytes = resvg_py.svg_to_bytes(svg_path=svg_path, width=tile_px)
+    return Image.open(io.BytesIO(bytes(png_bytes))).convert("RGBA")
 
 
 def apply_opacity(tile: Image.Image, opacity: float) -> Image.Image:
