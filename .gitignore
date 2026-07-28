@@ -8,3 +8,8 @@ id_rsa*
 # System Files
 .DS_Store
 Thumbs.db
+
+# Watermark tool test output
+tools/test-output/
+__pycache__/
+*.pyc
