@@ -143,7 +143,10 @@ const MAG_DATA = {
       logo: "assets/images/logos/TALAN.webp",
       description: "Designed and built a legacy system modernisation tool applying reverse engineering to analyse obsolete software. Developed a multi-agent AI pipeline with LangChain and LangGraph.",
       tags: ["LangChain", "LangGraph", "Multi-Agent AI", "Python", "Selenium"],
-      github: "https://github.com/JlassiRAed/TalanProject"
+      github: "https://github.com/JlassiRAed/TalanProject",
+      extraLinks: [
+        { label: "LegacyLens", url: "https://github.com/ademghorbel/LegacyLens" }
+      ]
     },
     {
       id: "enetcomdocs", title: "ENETCOMDocs", subtitle: "UX/UI Designer",

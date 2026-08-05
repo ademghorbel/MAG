@@ -361,7 +361,7 @@ const MAG_Controller = {
         <div class="tp-client">${p.client}</div>
         <p class="tp-desc">${p.description}</p>
           <div class="project-tags" style="margin-top:16px">${p.tags.map(t=>`<span class="tag">${t}</span>`).join("")}</div>
-        ${p.github || p.link ? `<div class="tp-links">${p.link ? `<a class="tp-link" href="${p.link}" target="_blank" rel="noopener noreferrer">View Live ↗</a>` : ""}${p.github ? `<a class="tp-link" href="${p.github}" target="_blank" rel="noopener noreferrer">GitHub ↗</a>` : ""}</div>` : ""}
+        ${p.github || p.link || p.extraLinks ? `<div class="tp-links">${p.link ? `<a class="tp-link" href="${p.link}" target="_blank" rel="noopener noreferrer">View Live ↗</a>` : ""}${p.github ? `<a class="tp-link" href="${p.github}" target="_blank" rel="noopener noreferrer">GitHub ↗</a>` : ""}${(p.extraLinks || []).map(l => `<a class="tp-link" href="${l.url}" target="_blank" rel="noopener noreferrer">${l.label} ↗</a>`).join("")}</div>` : ""}
       </div>
     `).join("");
   },
