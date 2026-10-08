@@ -1,4 +1,4 @@
-# Mohamed Adam Ghorbel — Portfolio
+# Mohamed Adam Ghorbel: Portfolio
 
 A high-performance, design-forward portfolio website showcasing my technical projects, graphic design work, and community volunteering.
 
