@@ -169,6 +169,7 @@ footer p{font-family:var(--font-mono);font-size:10px;letter-spacing:0.12em;color
   .cta-box{grid-template-columns:1fr;gap:28px;padding:40px 32px}
   footer{flex-direction:column;gap:8px;text-align:center;padding:24px}
   .page-hero{padding:120px 0 60px}
+  body[data-page="event-detail"] div[style*="grid-template-columns:1fr 320px"]{grid-template-columns:1fr!important;gap:40px!important}
 }
 @media(max-width:600px){
   .hero-h1{font-size:clamp(40px,12vw,60px)}
