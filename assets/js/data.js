@@ -347,7 +347,22 @@ const MAG_DATA = {
     { image: "assets/images/artworks/1-templatewhatsnext.webp", title: "Hear Us on Radio Sfax", year: "IEEE ESPRIT & ENET'Com SB" },
     { image: "assets/images/artworks/resechedule.webp", title: "New Date for What's Next?", year: "IEEE ESPRIT & ENET'Com SB" },
     { image: "assets/images/artworks/Electrospark2ndComingsoon.webp", title: "Electrospark 2nd Edition Coming Soon", year: "IEEE IES-PES ENET'Com SBJC" },
-    { image: "assets/images/artworks/NEXUSComingSoon.webp", title: "NEXUS Coming Soon", year: "NEXUS" }
+    { image: "assets/images/artworks/NEXUSComingSoon.webp", title: "NEXUS Coming Soon", year: "NEXUS" },
+    { image: "assets/images/artworks/social media.webp", title: "Follow Us on Social Media", year: "IEEE ENETCOM SB" },
+    { image: "assets/images/artworks/dive into teaser.webp", title: "Dive Into: Online Workshops", year: "IEEE ENETCOM SB · Dive Into" },
+    { image: "assets/images/artworks/cybersec.webp", title: "Dive Into: Cyber Security Workshop", year: "IEEE ENETCOM SB · Dive Into" },
+    { image: "assets/images/artworks/web dev.webp", title: "Dive Into: Web Development Workshop", year: "IEEE ENETCOM SB · Dive Into" },
+    { image: "assets/images/artworks/ahmed.webp", title: "Dive Into: Automotive Engineering Workshop", year: "IEEE ENETCOM SB · Dive Into" },
+    { image: "assets/images/artworks/mejda.webp", title: "Dive Into: Artificial Intelligence Workshop", year: "IEEE ENETCOM SB · Dive Into" },
+    { image: "assets/images/artworks/OPENING.webp", title: "Opening Ceremony", year: "IEEE ENETCOM SB" },
+    { image: "assets/images/artworks/planning opening.webp", title: "Opening Ceremony Planning", year: "IEEE ENETCOM SB" },
+    { image: "assets/images/artworks/team building.webp", title: "Team Building", year: "IEEE ENETCOM SB" },
+    { image: "assets/images/artworks/ag.webp", title: "General Assembly", year: "IEEE ENETCOM SB" },
+    { image: "assets/images/artworks/MemebershipDDL.webp", title: "Membership Deadline", year: "IEEE ENETCOM SB" },
+    { image: "assets/images/artworks/Sponsorship Training.webp", title: "Sponsorship Training", year: "IEEE ENETCOM SB" },
+    { image: "assets/images/artworks/recrutement.webp", title: "Recruitment Is Open", year: "IEEE ENETCOM SB" },
+    { image: "assets/images/artworks/WAHBIBI final.webp", title: "1st Place: IAS-IPCSD Chapter Design Contest", year: "IEEE IAS ENET'Com SBC" },
+    { image: "assets/images/artworks/Tunisian Evacuation Day.webp", title: "Tunisian Evacuation Day", year: "IEEE ENETCOM SB" }
   ],
 
   videos: [
