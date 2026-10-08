@@ -160,6 +160,25 @@ const MAG_DATA = {
 
   events: [
     {
+      id: "ieee-day-2026", title: "IEEE Day 2026 Celebration", subtext: "IEEE ENET'Com Student Branch",
+      role: "Media & Communication Design", date: "2026", category: "Local Celebration",
+      logo: "assets/images/events/ieee-day-2026/logo.webp",
+      banner: "assets/images/events/ieee-day-2026/Happy IEEE DAY.webp",
+      link: "ieee-day-2026.html", index: "10",
+      about: [
+        "<strong>About IEEE Day</strong><br>IEEE Day is an annual global celebration held on the first Tuesday of October, commemorating the moment in 1884 when engineers worldwide first gathered to share their technical ideas. It celebrates the power of collaboration, innovation and technology to benefit humanity.",
+        "<strong>Two weeks of celebration: October 4 to October 17</strong><br>Every year, IEEE Day spans two weeks, and this year it runs from October 4 to October 17. During this time, IEEE members and students around the world take part in workshops, talks and activities that promote learning, innovation and connection.",
+        "<strong>Our IEEE ENET'Com SB celebration</strong><br>This year, the IEEE ENET'Com Student Branch, together with all its units (chapters and affinity group), presents a series of online sessions focused on soft skills: communication, leadership and teamwork. They help participants grow personally and professionally while discovering the opportunities IEEE offers.",
+        "<strong>The grand in-person celebration</strong><br>To crown the occasion, we're hosting an in-person IEEE Day event on October 15 at the Centre de Camping & Formation Thyna: a day of energy, inspiration, networking and surprises, and the perfect moment to meet, connect and celebrate the spirit of IEEE together.",
+        "Join us from October 4 to October 17 as we celebrate innovation, teamwork and the passion that drives us to build a better tomorrow.",
+      ],
+      details: {
+        event: "IEEE Day 2026 Celebration", edition: "IEEE Day 2026",
+        role: "Media & Communication Design", organisation: "IEEE ENET'Com SB", type: "Volunteering · Media Design",
+        period: "Oct 4 – Oct 17, 2026", "in-person": "October 15, 2026 · Centre de Camping & Formation Thyna"
+      }
+    },
+    {
       id: "aesh", title: "AESH 2026", subtext: "AESS Sustainability Hackathon 2026",
       role: "Media Posts Design", date: "2026", category: "International Hackathon",
       logo: "assets/images/events/aesh/logo.webp",
