@@ -438,14 +438,15 @@ const MAG_Controller = {
     const badgeEl = document.getElementById("event-role-badge");
     if (badgeEl) badgeEl.textContent = ev.role;
 
-    // Dynamic logo background rendering
-    if (ev.logo) {
+    // Dynamic hero background rendering (heroBg overrides the logo)
+    const heroImg = ev.heroBg || ev.logo;
+    if (heroImg) {
       const hero = document.querySelector(".page-hero");
       if (hero) {
         hero.classList.add("page-hero--event");
         let bgWrap = document.createElement("div");
         bgWrap.className = "event-hero-bg";
-        bgWrap.innerHTML = `<img src="../${ev.logo}" alt="${ev.title} Logo"
+        bgWrap.innerHTML = `<img src="../${heroImg}" alt="${ev.title} Logo"
           onerror="this.parentElement.style.display='none'" />`;
         hero.insertBefore(bgWrap, hero.firstChild);
       }

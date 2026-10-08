@@ -198,7 +198,8 @@ const MAG_DATA = {
       id: "steps-3", title: "ENET'Com S.T.E.P.S 3.0", subtext: "IEEE ENET'Com Student Branch",
       role: "Media & Communication Design", date: "2026", category: "Orientation Campaign",
       logo: "assets/images/events/steps-3/logo.webp",
-      banner: "assets/images/events/steps-3/banner.webp",
+      banner: "assets/images/events/steps-3/STEPS3.0.webp",
+      heroBg: "assets/images/events/steps-3/banner.webp",
       link: "steps-3.html", index: "03",
       about: [
         "Choosing a field is easy. Understanding what it actually looks like, the work, the opportunities, the people, is harder. That's why ENET'Com SB created S.T.E.P.S: a chance for new students to hear directly from the graduates who've already walked the path.",
