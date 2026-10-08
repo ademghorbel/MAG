@@ -164,7 +164,7 @@ const MAG_DATA = {
       role: "Media & Communication Design", date: "2026", category: "Local Celebration",
       logo: "assets/images/events/ieee-day-2026/logo.webp",
       banner: "assets/images/events/ieee-day-2026/Happy IEEE DAY.webp",
-      link: "ieee-day-2026.html", index: "10",
+      link: "ieee-day-2026.html", index: "01",
       about: [
         "<strong>About IEEE Day</strong><br>IEEE Day is an annual global celebration held on the first Tuesday of October, commemorating the moment in 1884 when engineers worldwide first gathered to share their technical ideas. It celebrates the power of collaboration, innovation and technology to benefit humanity.",
         "<strong>Two weeks of celebration: October 4 to October 17</strong><br>Every year, IEEE Day spans two weeks, and this year it runs from October 4 to October 17. During this time, IEEE members and students around the world take part in workshops, talks and activities that promote learning, innovation and connection.",
@@ -183,7 +183,7 @@ const MAG_DATA = {
       role: "Media Posts Design", date: "2026", category: "International Hackathon",
       logo: "assets/images/events/aesh/logo.webp",
       banner: "assets/images/events/aesh/website.webp",
-      link: "aesh.html", index: "01",
+      link: "aesh.html", index: "02",
       about: [
         "AESS Sustainability Hackathon (AESH) 2026 serves as a dynamic hub connecting electrical engineering students with industry professionals.",
         "I led the visual identity for their social media campaigns, designing high-impact posts that maintained brand consistency while driving engagement.",
@@ -199,7 +199,7 @@ const MAG_DATA = {
       role: "Media & Communication Design", date: "2026", category: "International Congress",
       logo: "assets/images/events/cstam-3/logo.webp",
       banner: "assets/images/events/cstam-3/reveal 1.webp",
-      link: "cstam-3.html", index: "02",
+      link: "cstam-3.html", index: "03",
       about: [
         "CSTAM 3.0, the Computer Society Tunisian Annual Meeting (3rd Edition), is a premier technical conference bridging the gap between academia and industry for engineering students.",
         "I spearheaded the comprehensive media and visual communication strategy, crafting an identity that resonated with both students and corporate sponsors.",
@@ -211,75 +211,11 @@ const MAG_DATA = {
       }
     },
     {
-      id: "trsyp-2", title: "IEEE TRSYP 2.0", subtext: "IEEE Tunisian RAS Student and Young Professional Congress · 2nd Edition",
-      role: "Media Leader", date: "2025", category: "Internation Competition x Congress",
-      logo: "assets/images/events/trsyp-2/logo.webp",
-      banner: "assets/images/events/trsyp-2/Main.webp",
-      link: "trsyp-2.html", index: "03",
-      about: [
-        "TRSYP 2.0, the IEEE Tunisian RAS Student and Young Professional Congress (2nd Edition), is a cornerstone event uniting student professionals across the IEEE Tunisia Section, marking a significant leap in regional collaboration.",
-        "As Media Leader, I directed the full visual communication output. I managed a design pipeline from initial briefing to final delivery, ensuring every digital and print asset aligned with the congress's ambitious vision.",
-        "This leadership role demanded strict adherence to brand guidelines while innovating across digital campaigns and onsite print collateral.",
-      ],
-      details: {
-        event: "IEEE TRSYP 2.0", edition: "IEEE Tunisian RAS Student and Young Professional Congress · 2nd Edition",
-        role: "Media Leader", organisation: "IEEE ENETCOM SB", type: "Volunteering · Media Lead", period: "Mar 2025 – Nov 2025"
-      }
-    },
-    {
-      id: "ies-syp-2", title: "IEEE IES SYP Congress 2.0", subtext: "IEEE Industrial Electronics Society Students and Young Professionals Congress · 2nd Edition",
-      role: "Media & Communication Team member", date: "2025", category: "International Congress",
-      logo: "assets/images/events/ies-syp-2/logo.webp",
-      banner: "assets/images/events/ies-syp-2/Thumbnail.webp",
-      link: "ies-syp-2.html", index: "04",
-      about: [
-        "IES SYP Congress 2.0, the IEEE Industrial Electronics Society Students and Young Professionals Congress (2nd Edition), provides an international platform for industrial electronics students and young professionals to network and share innovations.",
-        "As a core member of the Media & Communication Team member, I designed dynamic promotional materials tailored to a highly technical audience.",
-        "I developed reusable social media templates, event graphics, and digital collateral that reinforced the congress's prestige and professional character.",
-      ],
-      details: {
-        event: "IEEE IES SYP Congress 2.0", edition: "IEEE Industrial Electronics Society Students and Young Professionals Congress · 2nd Edition",
-        role: "Media & Communication Team member Member", organisation: "IEEE ENETCOM SB / IEEE IES Tunisia Section Chapter",
-        type: "Volunteering · Media Design", period: "Apr 2025 – Aug 2025"
-      }
-    },
-    {
-      id: "sdc-3", title: "SDC 3.0 : IEEE Sight Day Congress", subtext: "Sight Day Congress · 3rd Edition",
-      role: "Official Ambassador & Designer", date: "2025", category: "Local Congress",
-      logo: "assets/images/events/sdc-3/logo.webp",
-      link: "sdc-3.html", index: "05",
-      about: [
-        "Dive into a world of discovery at the SIGHT Day Congress 3rd Edition! Explore the wonders of marine life.",
-        "I served a role as an ambassador, driving awareness campaigns and outreach initiatives.",
-        "My videos directly supported the event's promotion through social media posts, active community representation and promoting the event .",
-      ],
-      details: {
-        event: "SDC 3.0 : IEEE Sight Day Congress", edition: "Sight Day Congress · 3rd Edition",
-        role: "IEEE ENET'Com SB Ambassador", organisation: "IEEE SIGHT Group - ISIMM Student Branch", type: "Volunteering · Ambassador"
-      }
-    },
-    {
-      id: "xtreme-19", title: "IEEE Xtreme 19.0", subtext: "Global 24h Programming Competition",
-      role: "Media & Branding Lead", date: "2025", category: "International CP Competition",
-      logo: "assets/images/events/xtreme-19/logo.webp",
-      banner: "assets/images/events/xtreme-19/reg1.webp",
-      link: "xtreme-19.html", index: "06",
-      about: [
-        "IEEEXtreme is a prestigious global 24-hour hackathon that challenges the best coding minds across hundreds of universities worldwide.",
-        "I owned the complete media and branding lifecycle for the ENETCOM SB chapter, architecting the visual identity from the ground up.",
-        "This comprehensive project spanned from the initial teaser campaigns to live event coverage and final recap materials, demanding stamina and creative consistency.",
-      ],
-      details: {
-        event: "IEEE Xtreme 19.0", edition: "Global 24h Programming · 19th Edition",
-        role: "Media & Branding Lead", organisation: "IEEE ENETCOM SB", type: "Volunteering · Full Media Design"
-      }
-    },
-    {
       id: "eduvision", title: "EduVision", subtext: "IEEE Educational & Capacity Building Initiative",
       role: "Media & Communication Design Lead", date: "2026", category: "Local Initiative",
       logo: "assets/images/events/eduvision/logo.webp",
       banner: "assets/images/events/eduvision/TEASER.webp",
-      link: "eduvision.html", index: "08",
+      link: "eduvision.html", index: "04",
       about: [
         "EduVision is an IEEE initiative focused on educational excellence and capacity building across emerging markets.",
         "As Media & Communication Design Lead, I crafted the complete visual strategy: establishing brand identity, designing promotional materials, and creating a cohesive multimedia presence.",
@@ -296,7 +232,7 @@ const MAG_DATA = {
       role: "Media Designer & Community Organizer", date: "2026", category: "Hacktahon and Chess Competition",
       logo: "assets/images/events/cshize/logo.webp",
       banner: "assets/images/events/cshize/hachathonnnn.webp",
-      link: "cshize.html", index: "09",
+      link: "cshize.html", index: "05",
       about: [
         "IEEE CS SYP HIZE, the Computer Society Students and Young Professionals High Impact Zonal Events, is a grassroots initiative designed to inspire youth in tech. The event features hackathons, technical workshops, and community engagement booths.",
         "I contributed as Media Designer & Community Organizer, creating all visual communication assets, managing booth presence, and coordinating event social media.",
@@ -306,6 +242,70 @@ const MAG_DATA = {
       details: {
         event: "IEEE CS SYP HIZE", edition: "Computer Society Students and Young Professionals High Impact Zonal Events",
         role: "Media Designer & Community Organizer", organisation: "IEEE Computer Society", type: "Volunteering · Design & Community", period: "Feb 2025 – Mar 2025"
+      }
+    },
+    {
+      id: "trsyp-2", title: "IEEE TRSYP 2.0", subtext: "IEEE Tunisian RAS Student and Young Professional Congress · 2nd Edition",
+      role: "Media Leader", date: "2025", category: "Internation Competition x Congress",
+      logo: "assets/images/events/trsyp-2/logo.webp",
+      banner: "assets/images/events/trsyp-2/Main.webp",
+      link: "trsyp-2.html", index: "06",
+      about: [
+        "TRSYP 2.0, the IEEE Tunisian RAS Student and Young Professional Congress (2nd Edition), is a cornerstone event uniting student professionals across the IEEE Tunisia Section, marking a significant leap in regional collaboration.",
+        "As Media Leader, I directed the full visual communication output. I managed a design pipeline from initial briefing to final delivery, ensuring every digital and print asset aligned with the congress's ambitious vision.",
+        "This leadership role demanded strict adherence to brand guidelines while innovating across digital campaigns and onsite print collateral.",
+      ],
+      details: {
+        event: "IEEE TRSYP 2.0", edition: "IEEE Tunisian RAS Student and Young Professional Congress · 2nd Edition",
+        role: "Media Leader", organisation: "IEEE ENETCOM SB", type: "Volunteering · Media Lead", period: "Mar 2025 – Nov 2025"
+      }
+    },
+    {
+      id: "ies-syp-2", title: "IEEE IES SYP Congress 2.0", subtext: "IEEE Industrial Electronics Society Students and Young Professionals Congress · 2nd Edition",
+      role: "Media & Communication Team member", date: "2025", category: "International Congress",
+      logo: "assets/images/events/ies-syp-2/logo.webp",
+      banner: "assets/images/events/ies-syp-2/Thumbnail.webp",
+      link: "ies-syp-2.html", index: "07",
+      about: [
+        "IES SYP Congress 2.0, the IEEE Industrial Electronics Society Students and Young Professionals Congress (2nd Edition), provides an international platform for industrial electronics students and young professionals to network and share innovations.",
+        "As a core member of the Media & Communication Team member, I designed dynamic promotional materials tailored to a highly technical audience.",
+        "I developed reusable social media templates, event graphics, and digital collateral that reinforced the congress's prestige and professional character.",
+      ],
+      details: {
+        event: "IEEE IES SYP Congress 2.0", edition: "IEEE Industrial Electronics Society Students and Young Professionals Congress · 2nd Edition",
+        role: "Media & Communication Team member Member", organisation: "IEEE ENETCOM SB / IEEE IES Tunisia Section Chapter",
+        type: "Volunteering · Media Design", period: "Apr 2025 – Aug 2025"
+      }
+    },
+    {
+      id: "sdc-3", title: "SDC 3.0 : IEEE Sight Day Congress", subtext: "Sight Day Congress · 3rd Edition",
+      role: "Official Ambassador & Designer", date: "2025", category: "Local Congress",
+      logo: "assets/images/events/sdc-3/logo.webp",
+      link: "sdc-3.html", index: "08",
+      about: [
+        "Dive into a world of discovery at the SIGHT Day Congress 3rd Edition! Explore the wonders of marine life.",
+        "I served a role as an ambassador, driving awareness campaigns and outreach initiatives.",
+        "My videos directly supported the event's promotion through social media posts, active community representation and promoting the event .",
+      ],
+      details: {
+        event: "SDC 3.0 : IEEE Sight Day Congress", edition: "Sight Day Congress · 3rd Edition",
+        role: "IEEE ENET'Com SB Ambassador", organisation: "IEEE SIGHT Group - ISIMM Student Branch", type: "Volunteering · Ambassador"
+      }
+    },
+    {
+      id: "xtreme-19", title: "IEEE Xtreme 19.0", subtext: "Global 24h Programming Competition",
+      role: "Media & Branding Lead", date: "2025", category: "International CP Competition",
+      logo: "assets/images/events/xtreme-19/logo.webp",
+      banner: "assets/images/events/xtreme-19/reg1.webp",
+      link: "xtreme-19.html", index: "09",
+      about: [
+        "IEEEXtreme is a prestigious global 24-hour hackathon that challenges the best coding minds across hundreds of universities worldwide.",
+        "I owned the complete media and branding lifecycle for the ENETCOM SB chapter, architecting the visual identity from the ground up.",
+        "This comprehensive project spanned from the initial teaser campaigns to live event coverage and final recap materials, demanding stamina and creative consistency.",
+      ],
+      details: {
+        event: "IEEE Xtreme 19.0", edition: "Global 24h Programming · 19th Edition",
+        role: "Media & Branding Lead", organisation: "IEEE ENETCOM SB", type: "Volunteering · Full Media Design"
       }
     },
   ],
