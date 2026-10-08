@@ -366,6 +366,7 @@ const MAG_DATA = {
   ],
 
   videos: [
+    { url: "https://drive.google.com/file/d/1mxPif_JIER49Oa265Fdnqmo6K0nmuaVI/preview", thumb: "https://drive.google.com/thumbnail?id=1mxPif_JIER49Oa265Fdnqmo6K0nmuaVI&sz=w640", title: "IEEE PES TGM 8.0", client: "Event Proposal", tags: ["Proposal", "Motion Design"] },
     { url: "https://drive.google.com/file/d/1nVDewHvj6ix3MvxV9Jm38t9e90S4qd2u/preview", thumb: "https://drive.google.com/thumbnail?id=1nVDewHvj6ix3MvxV9Jm38t9e90S4qd2u&sz=w640", title: "IEEE IES DAY 2025", client: "Event Highlights", tags: ["Video Editing", "Motion Graphics"] },
     { url: "https://drive.google.com/file/d/1_oW45LDKr6ibnwyZWZ6V5LeGJ75KdBug/preview", thumb: "https://drive.google.com/thumbnail?id=1_oW45LDKr6ibnwyZWZ6V5LeGJ75KdBug&sz=w640", title: "IEEE IES-PES ENET'Com SB Joint Chapter Activities 2025", client: "Yearly Review", tags: ["Video Editing", "After Effects"] },
     { url: "https://drive.google.com/file/d/1D54u9l6M8chlNnSves7sFiaZx7yWZEKl/preview", thumb: "https://drive.google.com/thumbnail?id=1D54u9l6M8chlNnSves7sFiaZx7yWZEKl&sz=w640", title: "IEEE PES TGM 7.0", client: "Event Proposal", tags: ["Proposal", "Motion Design"] },
