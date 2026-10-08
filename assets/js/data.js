@@ -345,7 +345,9 @@ const MAG_DATA = {
     { image: "assets/images/artworks/1etencommence.webp", title: "Confusion Is Not Failure", year: "ENET'Commence" },
     { image: "assets/images/artworks/2etencommence.webp", title: "ENET'Commence Is Live", year: "ENET'Commence" },
     { image: "assets/images/artworks/1-templatewhatsnext.webp", title: "Hear Us on Radio Sfax", year: "IEEE ESPRIT & ENET'Com SB" },
-    { image: "assets/images/artworks/resechedule.webp", title: "New Date for What's Next?", year: "IEEE ESPRIT & ENET'Com SB" }
+    { image: "assets/images/artworks/resechedule.webp", title: "New Date for What's Next?", year: "IEEE ESPRIT & ENET'Com SB" },
+    { image: "assets/images/artworks/Electrospark2ndComingsoon.webp", title: "Electrospark 2nd Edition Coming Soon", year: "IEEE IES-PES ENET'Com SBJC" },
+    { image: "assets/images/artworks/NEXUSComingSoon.webp", title: "NEXUS Coming Soon", year: "NEXUS" }
   ],
 
   videos: [
