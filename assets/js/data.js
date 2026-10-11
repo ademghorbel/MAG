@@ -396,7 +396,9 @@ const MAG_DATA = {
     { image: "assets/images/artworks/Sponsorship Training.webp", title: "Sponsorship Training", year: "IEEE ENETCOM SB" },
     { image: "assets/images/artworks/recrutement.webp", title: "Recruitment Is Open", year: "IEEE ENETCOM SB" },
     { image: "assets/images/artworks/WAHBIBI final.webp", title: "1st Place: IAS-IPCSD Chapter Design Contest", year: "IEEE IAS ENET'Com SBC" },
-    { image: "assets/images/artworks/Tunisian Evacuation Day.webp", title: "Tunisian Evacuation Day", year: "IEEE ENETCOM SB" }
+    { image: "assets/images/artworks/Tunisian Evacuation Day.webp", title: "Tunisian Evacuation Day", year: "IEEE ENETCOM SB" },
+    { image: "assets/images/artworks/WiePink Teaser.webp", title: "Get Ready for WiePink", year: "IEEE WIE ENET'Com SAG" },
+    { image: "assets/images/artworks/WiePink Infosession.webp", title: "WiePink Infosession", year: "IEEE WIE ENET'Com SAG" }
   ],
 
   videos: [
