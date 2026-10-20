@@ -116,17 +116,26 @@ function initAurora(ctn, opts = {}) {
   window.addEventListener('resize', resize, { passive: true });
   resize();
 
-  // ponytail: pause rAF when hero is off-screen — saves full GPU cost while scrolled away
-  let t = 0, running = true;
-  new IntersectionObserver(([e]) => { running = e.isIntersecting; }, { threshold: 0 }).observe(canvas);
-  (function tick() {
-    requestAnimationFrame(tick);
-    if (!running) return;
+  // ponytail: the loop runs only while the hero is on screen; reduced motion gets one still frame
+  const still = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let t = 0, running = false;
+  function tick() {
     t += 0.01;
     gl.uniform1f(uTime, t * speed);
     gl.clear(gl.COLOR_BUFFER_BIT);
     gl.drawArrays(gl.TRIANGLES, 0, 3);
-  })();
+    if (running) requestAnimationFrame(tick);
+  }
+  if (still) {
+    tick();
+    window.addEventListener('resize', tick, { passive: true }); // resizing clears the canvas
+  } else {
+    new IntersectionObserver(([e]) => {
+      const wasRunning = running;
+      running = e.isIntersecting;
+      if (running && !wasRunning) requestAnimationFrame(tick);
+    }, { threshold: 0 }).observe(canvas);
+  }
 }
 
 const ctn = document.getElementById('aurora-hero');
