@@ -47,7 +47,7 @@ const MAG_DATA = {
       company: "TALAN Tunisia", role: "AI Engineering Intern", type: "Internship", statusColor: "blue",
       date: "Jul 2025 – Aug 2025",
       logo: "assets/images/logos/TALAN.webp",
-      description: "Designed and built a legacy system modernisation solution applying reverse engineering to deconstruct and analyse obsolete software. Developed a multi-agent AI pipeline with LangChain and LangGraph.",
+      description: "Built the structured code analyser and module aggregation agents of a LangChain and LangGraph multi-agent pipeline that reverse-engineers legacy COBOL, VB6 and Fortran code for modernisation, and co-built the team's agent-to-agent (A2A) communication.",
       stack: ["Python", "LangChain", "LangGraph", "Multi-Agent AI", "Selenium", "BeautifulSoup"]
     },
     {
@@ -141,8 +141,8 @@ const MAG_DATA = {
       id: "talan-ai", title: "Legacy System Modernisation", subtitle: "Multi-Agent AI Pipeline",
       client: "TALAN Tunisia · AI Internship", period: "Jul 2025 – Aug 2025", category: "AI Engineering", color: "blue",
       logo: "assets/images/logos/TALAN.webp",
-      description: "Designed and built a legacy system modernisation tool applying reverse engineering to analyse obsolete software. Developed a multi-agent AI pipeline with LangChain and LangGraph.",
-      tags: ["LangChain", "LangGraph", "Multi-Agent AI", "Python", "Selenium"],
+      description: "Team-built multi-agent pipeline that routes legacy code to COBOL, VB6, Fortran and generic agents. My part: the structured analyser and the module aggregation agent that groups files into business modules, plus shared work on agent-to-agent (A2A) communication. Continued as LegacyLens, adding Mermaid architecture and class diagrams, a code chatbot and a Streamlit UI.",
+      tags: ["LangChain", "LangGraph", "Multi-Agent AI", "A2A", "Python"],
       github: "https://github.com/JlassiRAed/TalanProject",
       extraLinks: [
         { label: "LegacyLens", url: "https://github.com/ademghorbel/LegacyLens" }
