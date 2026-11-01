@@ -58,10 +58,10 @@ const MAG_DATA = {
       stack: ["Figma", "Adobe Photoshop", "Illustrator", "UI/UX Design", "Branding"]
     },
     {
-      company: "Starwaves", role: "Part-time Graphic Designer", type: "Commercial", statusColor: "blue",
+      company: "Starwaves", role: "Part-time Media Manager", type: "Commercial", statusColor: "blue",
       date: "Ongoing",
       logo: "assets/images/logos/STARWAVES.webp",
-      description: "Poster and visual design work as part of an ongoing commercial engagement. Responsible for brand-consistent social media assets and promotional graphics.",
+      description: "Managing Starwaves' media: planning and designing brand-consistent social media content, posters and promotional graphics as part of an ongoing commercial engagement.",
       stack: ["Adobe Photoshop", "Illustrator", "After Effects"]
     },
     {
@@ -160,11 +160,29 @@ const MAG_DATA = {
 
   events: [
     {
+      id: "xtreme-20", title: "IEEE Xtreme 20.0", subtext: "Global 24h Programming Competition",
+      role: "Media & Communication Design", date: "2026", category: "International CP Competition",
+      logo: "assets/images/events/xtreme-20/logo.webp",
+      banner: "assets/images/events/xtreme-20/logo.webp",
+      heroBg: "assets/images/events/xtreme-20/logo.webp",
+      link: "xtreme-20.html", index: "01",
+      about: [
+        "IEEEXtreme is a global 24-hour programming competition where teams of IEEE student members solve a set of hard algorithmic problems, competing against hundreds of universities worldwide.",
+        "For the 20th edition, the IEEE ENET'Com Student Branch and its Computer Society chapter hosted a local team space with a full program around the contest: opening ceremony, coding sessions, team building, a surprise game and a closing ceremony.",
+        "I designed the campaign under the theme \"The Night Sky Is Calling\": the opener, the registration post and the two-slide planning carousel.",
+      ],
+      details: {
+        event: "IEEE Xtreme 20.0", edition: "Global 24h Programming · 20th Edition",
+        role: "Media & Communication Design", organisation: "IEEE ENET'Com SB · CS Chapter", type: "Volunteering · Media Design",
+        period: "October 2026"
+      }
+    },
+    {
       id: "ieee-day-2026", title: "IEEE Day 2026 Celebration", subtext: "IEEE ENET'Com Student Branch",
       role: "Media & Communication Design", date: "2026", category: "Local Celebration",
       logo: "assets/images/events/ieee-day-2026/logo.webp",
       banner: "assets/images/events/ieee-day-2026/Happy IEEE DAY.webp",
-      link: "ieee-day-2026.html", index: "01",
+      link: "ieee-day-2026.html", index: "02",
       about: [
         "<strong>About IEEE Day</strong><br>IEEE Day is an annual global celebration held on the first Tuesday of October, commemorating the moment in 1884 when engineers worldwide first gathered to share their technical ideas. It celebrates the power of collaboration, innovation and technology to benefit humanity.",
         "<strong>Two weeks of celebration: October 4 to October 17</strong><br>Every year, IEEE Day spans two weeks, and this year it runs from October 4 to October 17. During this time, IEEE members and students around the world take part in workshops, talks and activities that promote learning, innovation and connection.",
@@ -183,7 +201,7 @@ const MAG_DATA = {
       role: "Media & Communication Design", date: "2026", category: "Local Camp",
       logo: "assets/images/events/summer-camp-1/logo.webp",
       banner: "assets/images/events/summer-camp-1/Teaser.webp",
-      link: "summer-camp-1.html", index: "02",
+      link: "summer-camp-1.html", index: "03",
       about: [
         "Summer Camp 1.0 is a fun camp by the IEEE ENET'Com Student Branch: two days of fun activities and workshops, held on August 21 and 22, 2026 at the camping and summer centre in Bekalta.",
         "I designed the campaign posts for the camp: the teaser, the venue reveal and the fun fact.",
@@ -200,7 +218,7 @@ const MAG_DATA = {
       logo: "assets/images/events/steps-3/logo.webp",
       banner: "assets/images/events/steps-3/banner.webp",
       heroBg: "assets/images/events/steps-3/banner.webp",
-      link: "steps-3.html", index: "03",
+      link: "steps-3.html", index: "04",
       about: [
         "Choosing a field is easy. Understanding what it actually looks like, the work, the opportunities, the people, is harder. That's why ENET'Com SB created S.T.E.P.S: a chance for new students to hear directly from the graduates who've already walked the path.",
         "S.T.E.P.S gives new students an in-depth look at their chosen fields and the opportunities that await at the National School of Electronics and Telecoms of Sfax. Led by accomplished graduates, each session delves into the core of a field while sharing insights and experiences.",
@@ -217,7 +235,7 @@ const MAG_DATA = {
       role: "Media Posts Design", date: "2026", category: "International Hackathon",
       logo: "assets/images/events/aesh/logo.webp",
       banner: "assets/images/events/aesh/website.webp",
-      link: "aesh.html", index: "04",
+      link: "aesh.html", index: "05",
       about: [
         "AESS Sustainability Hackathon (AESH) 2026 serves as a dynamic hub connecting electrical engineering students with industry professionals.",
         "I led the visual identity for their social media campaigns, designing high-impact posts that maintained brand consistency while driving engagement.",
@@ -233,7 +251,7 @@ const MAG_DATA = {
       role: "Media & Communication Design", date: "2026", category: "International Congress",
       logo: "assets/images/events/cstam-3/logo.webp",
       banner: "assets/images/events/cstam-3/reveal 1.webp",
-      link: "cstam-3.html", index: "05",
+      link: "cstam-3.html", index: "06",
       about: [
         "CSTAM 3.0, the Computer Society Tunisian Annual Meeting (3rd Edition), is a premier technical conference bridging the gap between academia and industry for engineering students.",
         "I spearheaded the comprehensive media and visual communication strategy, crafting an identity that resonated with both students and corporate sponsors.",
@@ -249,7 +267,7 @@ const MAG_DATA = {
       role: "Media & Communication Design Lead", date: "2026", category: "Local Initiative",
       logo: "assets/images/events/eduvision/logo.webp",
       banner: "assets/images/events/eduvision/TEASER.webp",
-      link: "eduvision.html", index: "06",
+      link: "eduvision.html", index: "07",
       about: [
         "EduVision is an IEEE initiative focused on educational excellence and capacity building across emerging markets.",
         "As Media & Communication Design Lead, I crafted the complete visual strategy: establishing brand identity, designing promotional materials, and creating a cohesive multimedia presence.",
@@ -266,7 +284,7 @@ const MAG_DATA = {
       role: "Media Designer & Community Organizer", date: "2026", category: "Hacktahon and Chess Competition",
       logo: "assets/images/events/cshize/logo.webp",
       banner: "assets/images/events/cshize/hachathonnnn.webp",
-      link: "cshize.html", index: "07",
+      link: "cshize.html", index: "08",
       about: [
         "IEEE CS SYP HIZE, the Computer Society Students and Young Professionals High Impact Zonal Events, is a grassroots initiative designed to inspire youth in tech. The event features hackathons, technical workshops, and community engagement booths.",
         "I contributed as Media Designer & Community Organizer, creating all visual communication assets, managing booth presence, and coordinating event social media.",
@@ -283,7 +301,7 @@ const MAG_DATA = {
       role: "Media Leader", date: "2025", category: "Internation Competition x Congress",
       logo: "assets/images/events/trsyp-2/logo.webp",
       banner: "assets/images/events/trsyp-2/Main.webp",
-      link: "trsyp-2.html", index: "08",
+      link: "trsyp-2.html", index: "09",
       about: [
         "TRSYP 2.0, the IEEE Tunisian RAS Student and Young Professional Congress (2nd Edition), is a cornerstone event uniting student professionals across the IEEE Tunisia Section, marking a significant leap in regional collaboration.",
         "As Media Leader, I directed the full visual communication output. I managed a design pipeline from initial briefing to final delivery, ensuring every digital and print asset aligned with the congress's ambitious vision.",
@@ -299,7 +317,7 @@ const MAG_DATA = {
       role: "Media & Communication Team member", date: "2025", category: "International Congress",
       logo: "assets/images/events/ies-syp-2/logo.webp",
       banner: "assets/images/events/ies-syp-2/Thumbnail.webp",
-      link: "ies-syp-2.html", index: "09",
+      link: "ies-syp-2.html", index: "10",
       about: [
         "IES SYP Congress 2.0, the IEEE Industrial Electronics Society Students and Young Professionals Congress (2nd Edition), provides an international platform for industrial electronics students and young professionals to network and share innovations.",
         "As a core member of the Media & Communication Team member, I designed dynamic promotional materials tailored to a highly technical audience.",
@@ -315,7 +333,7 @@ const MAG_DATA = {
       id: "sdc-3", title: "SDC 3.0 : IEEE Sight Day Congress", subtext: "Sight Day Congress · 3rd Edition",
       role: "Official Ambassador & Designer", date: "2025", category: "Local Congress",
       logo: "assets/images/events/sdc-3/logo.webp",
-      link: "sdc-3.html", index: "10",
+      link: "sdc-3.html", index: "11",
       about: [
         "Dive into a world of discovery at the SIGHT Day Congress 3rd Edition! Explore the wonders of marine life.",
         "I served a role as an ambassador, driving awareness campaigns and outreach initiatives.",
@@ -331,7 +349,7 @@ const MAG_DATA = {
       role: "Media & Branding Lead", date: "2025", category: "International CP Competition",
       logo: "assets/images/events/xtreme-19/logo.webp",
       banner: "assets/images/events/xtreme-19/reg1.webp",
-      link: "xtreme-19.html", index: "11",
+      link: "xtreme-19.html", index: "12",
       about: [
         "IEEEXtreme is a prestigious global 24-hour hackathon that challenges the best coding minds across hundreds of universities worldwide.",
         "I owned the complete media and branding lifecycle for the ENETCOM SB chapter, architecting the visual identity from the ground up.",
@@ -349,7 +367,7 @@ const MAG_DATA = {
       label: "Currently Studying", title: "ENET'Com Sfax", sub: "Data Engineering & AI Systems",
       badge: "3rd Year", badgeColor: "blue"
     },
-    { label: "Part-time Role", title: "Starwaves", sub: "Graphic Designer", badge: "Active", badgeColor: "blue" },
+    { label: "Part-time Role", title: "Starwaves", sub: "Media Manager", badge: "Active", badgeColor: "blue" },
     {
       label: "Volunteering", title: "IEEE ENETCOM SB", sub: "Graphic Designer · Media & Comm.",
       badge: "Volunteer", badgeColor: "orange"
@@ -357,6 +375,7 @@ const MAG_DATA = {
   ],
 
   artworks: [
+    { image: "assets/images/artworks/IEEE Day Vote Now.webp", title: "IEEE Day 2026: Vote for Us", year: "IEEE ENETCOM SB" },
     { image: "assets/images/artworks/1st Session Benefits.webp", title: "1st Session Benefits", year: "IEEE IES Tunisia Section Chapter-PES" },
     { image: "assets/images/artworks/2nd Session Benefits.webp", title: "2nd Session Benefits", year: "IEEE IES Tunisia Section Chapter-PES" },
     { image: "assets/images/artworks/1st post IES DAY.webp", title: "IES DAY 1st Post", year: "IEEE IES Tunisia Section Chapter-PES" },
