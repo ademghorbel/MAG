@@ -169,7 +169,7 @@ const MAG_DATA = {
       about: [
         "IEEEXtreme is a global 24-hour programming competition where teams of IEEE student members solve a set of hard algorithmic problems, competing against hundreds of universities worldwide.",
         "For the 20th edition, the IEEE ENET'Com Student Branch and its Computer Society chapter hosted a local team space with a full program around the contest: opening ceremony, coding sessions, team building, a surprise game and a closing ceremony.",
-        "I designed the campaign under the theme \"The Night Sky Is Calling\": the opener, the registration post and the two-slide planning carousel.",
+        "I designed the campaign under the theme \"The Night Sky Is Calling\": the opener, the registration post, the infosession post and the two-slide planning carousel.",
       ],
       details: {
         event: "IEEE Xtreme 20.0", edition: "Global 24h Programming · 20th Edition",
