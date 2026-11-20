@@ -160,20 +160,20 @@ const MAG_DATA = {
 
   events: [
     {
-      id: "feee-11", title: "FEEE 11.0", subtext: "Securing Intelligence, Connecting the Future",
+      id: "feee-11", title: "FEEE 11.0", subtext: "Forum ENET'Com Entreprises-Étudiants",
       role: "Brand Identity & Media Design", date: "2026", category: "Forum",
       logo: "assets/images/events/feee-11/logo.webp",
       banner: "assets/images/events/feee-11/logo.webp",
       heroBg: "assets/images/events/feee-11/logo.webp",
       link: "feee-11.html", index: "01",
       about: [
-        "FEEE 11.0 is a forum on security and emerging technologies, held under the theme \"Securing Intelligence, Connecting the Future\". It brings students, companies and institutions together for a day of talks, booths and networking.",
-        "The 11th edition took place on November 21, 2026 at Espace MARASSIM, Route de Téniour, Km 11, Sfax.",
-        "I designed the visual identity and the campaign: the logo, the teaser, the location reveal, the profile picture and cover, the 5 m × 2.2 m banner and the coffee break coupon.",
+        "FEEE (Forum ENET'Com Entreprises-Étudiants) is the yearly forum where students of ENET'Com Sfax meet companies and institutions. The 11th edition focused on security and emerging technologies, under the theme \"Securing Intelligence, Connecting the Future\", with a day of talks, booths and networking.",
+        "It took place on November 21, 2026 at Espace MARASSIM, Route de Téniour, Km 11, Sfax.",
+        "I designed the visual identity and the campaign: the logo, the teaser, the location reveal, the profile picture and cover, the 5 m × 2.2 m banner and the roll-up.",
       ],
       details: {
         event: "FEEE 11.0", edition: "11th Edition",
-        role: "Brand Identity & Media Design", type: "Volunteering · Media Design",
+        role: "Brand Identity & Media Design", organisation: "ENET'Com Sfax", type: "Volunteering · Media Design",
         date: "November 21, 2026", venue: "Espace MARASSIM, Sfax"
       }
     },
