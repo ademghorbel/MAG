@@ -35,6 +35,17 @@ const MAG_DATA = {
     },
   ],
 
+  // Hero orbit: tools circling the portrait. Add/remove entries here; icons are white SVGs in assets/images/tools/
+  heroTools: [
+    { name: "Photoshop", icon: "assets/images/tools/adobephotoshop.svg" },
+    { name: "Python", icon: "assets/images/tools/python.svg" },
+    { name: "Illustrator", icon: "assets/images/tools/adobeillustrator.svg" },
+    { name: "LangChain", icon: "assets/images/tools/langchain.svg" },
+    { name: "After Effects", icon: "assets/images/tools/adobeaftereffects.svg" },
+    { name: "n8n", icon: "assets/images/tools/n8n.svg" },
+    { name: "Premiere Pro", icon: "assets/images/tools/adobepremierepro.svg" }
+  ],
+
   experience: [
     {
       company: "OliveSoft", role: "AI Automation Intern", type: "Internship", statusColor: "blue",

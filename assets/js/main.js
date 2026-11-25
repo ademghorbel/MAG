@@ -467,6 +467,83 @@ const MAG_Controller = {
 
 };
 
+/* ─── HERO ORBIT ─────────────────────── */
+// Tilted ring of tool badges around the portrait. Back half sits under the image (z 1), front half over it (z 3).
+// Tool list lives in MAG_DATA.heroTools. ponytail: plain rAF + transforms, no GSAP needed for a constant spin.
+function initHeroOrbit() {
+  const wrap = document.querySelector(".hero-img-wrap");
+  const tools = MAG_DATA.heroTools;
+  if (!wrap || !tools || !tools.length) return;
+
+  const LOOP_MS = 36000, TILT = -10 * Math.PI / 180;
+  const NS = "http://www.w3.org/2000/svg";
+  const ring = cls => {
+    const svg = document.createElementNS(NS, "svg");
+    svg.setAttribute("class", "orbit-ring " + cls);
+    svg.setAttribute("aria-hidden", "true");
+    const path = document.createElementNS(NS, "path");
+    svg.appendChild(path); wrap.appendChild(svg);
+    return path;
+  };
+  const back = ring("orbit-back"), front = ring("orbit-front");
+  const badges = tools.map(t => {
+    const b = document.createElement("span");
+    b.className = "orbit-badge"; b.tabIndex = 0;
+    b.dataset.name = t.name; b.setAttribute("aria-label", t.name);
+    b.innerHTML = `<img src="${t.icon}" alt="">`;
+    wrap.appendChild(b);
+    return b;
+  });
+
+  let cx = 0, cy = 0, rx = 0, ry = 0, angle = 0, paused = false, last = 0;
+  const point = a => {
+    const x = rx * Math.cos(a), y = ry * Math.sin(a);
+    return [cx + x * Math.cos(TILT) - y * Math.sin(TILT), cy + x * Math.sin(TILT) + y * Math.cos(TILT)];
+  };
+  const arc = (from, to) => {
+    let d = "";
+    for (let i = 0; i <= 48; i++) {
+      const [x, y] = point(from + (to - from) * i / 48);
+      d += (i ? "L" : "M") + x.toFixed(1) + " " + y.toFixed(1);
+    }
+    return d;
+  };
+  const place = () => {
+    badges.forEach((b, i) => {
+      const a = angle + i * 2 * Math.PI / badges.length;
+      const [x, y] = point(a);
+      const depth = (Math.sin(a) + 1) / 2;            // 0 = far back (top), 1 = front (bottom)
+      b.style.transform = `translate(${x.toFixed(1)}px,${y.toFixed(1)}px) translate(-50%,-50%) scale(${(0.85 + 0.15 * depth).toFixed(3)})`;
+      b.style.opacity = (0.6 + 0.4 * depth).toFixed(2);
+      b.style.zIndex = Math.sin(a) > 0 ? 3 : 1;
+    });
+  };
+  const measure = () => {
+    const W = wrap.clientWidth, H = wrap.clientHeight;
+    cx = W * 0.5; cy = H * 0.5; rx = W * 0.5; ry = W * 0.13;   // chest height; tweak here
+    back.setAttribute("d", arc(Math.PI, 2 * Math.PI));
+    front.setAttribute("d", arc(0, Math.PI));
+    place();
+  };
+  new ResizeObserver(measure).observe(wrap);
+
+  badges.forEach(b => {
+    b.addEventListener("mouseenter", () => paused = true);
+    b.addEventListener("mouseleave", () => paused = false);
+    b.addEventListener("focus", () => paused = true);
+    b.addEventListener("blur", () => paused = false);
+  });
+
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;  // static positions
+  const tick = now => {
+    if (!paused && last) angle += (now - last) * 2 * Math.PI / LOOP_MS;
+    last = now;
+    if (!paused && rx) place();
+    requestAnimationFrame(tick);
+  };
+  requestAnimationFrame(tick);
+}
+
 /* ─── BOOTSTRAP ─────────────────────── */
 document.addEventListener("DOMContentLoaded", () => {
   const isInEvents = window.location.pathname.includes("/events/");
@@ -477,6 +554,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initLoader();
   MAG_Controller.setup(namespace);
   initNavPill();
+  initHeroOrbit();
 
   if (typeof gsap !== "undefined") {
     if (typeof ScrollTrigger !== "undefined") gsap.registerPlugin(ScrollTrigger);
