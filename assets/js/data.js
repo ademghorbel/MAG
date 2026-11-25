@@ -37,14 +37,14 @@ const MAG_DATA = {
 
   experience: [
     {
-      company: "OlivSoft", role: "Automation & Integration Intern", type: "Internship", statusColor: "blue",
+      company: "OliveSoft", role: "AI Automation Intern", type: "Internship", statusColor: "blue",
       date: "Jun 2026 – Aug 2026",
       logo: "assets/images/logos/OliveSoft.webp",
       description: "Automating the daily monitoring process for Boomi and Make integration flows using n8n. Retrieves execution logs via APIs, cross-references them with SFTP server files, and detects anomalies such as failures, delays, and missing files. Includes automated daily report generation sent via Outlook and full solution documentation.",
       stack: ["n8n", "Boomi", "Make", "REST APIs", "SFTP", "Outlook", "Workflow Automation", "Integration Monitoring"]
     },
     {
-      company: "TALAN Tunisia", role: "AI Engineering Intern", type: "Internship", statusColor: "blue",
+      company: "TALAN Tunisia", role: "Agentic AI Engineering Intern", type: "Internship", statusColor: "blue",
       date: "Jul 2025 – Aug 2025",
       logo: "assets/images/logos/TALAN.webp",
       description: "Built the structured code analyser and module aggregation agents of a LangChain and LangGraph multi-agent pipeline that reverse-engineers legacy COBOL, VB6 and Fortran code for modernisation, and co-built the team's agent-to-agent (A2A) communication.",
@@ -122,6 +122,13 @@ const MAG_DATA = {
   ],
 
   techProjects: [
+    {
+      id: "docagent", title: "DocAgent", subtitle: "Agentic Multimodal RAG for Technical Manuals",
+      client: "Personal Project", period: "Oct 2026 – Nov 2026", category: "AI Engineering", color: "orange",
+      description: "When a machine raises an alert, DocAgent reads the equipment's manuals (text, tables and diagrams) and returns a sourced diagnosis with links to the exact pages, on open-weight models (Qwen2.5-VL-7B, 4-bit). Benchmarked against text RAG, direct VLM and ColQwen page-image RAG on 184 questions: +8.7 points over the best baseline on long single documents, 91% on in-house drive-manual questions, and 21 of 23 unanswerable questions correctly refused.",
+      tags: ["LangGraph", "ColQwen", "Qwen2.5-VL", "FAISS", "Gradio", "Python"],
+      github: "https://github.com/ademghorbel/DocAgent"
+    },
     {
       id: "smart-manager", title: "Smart Manager", subtitle: "Industrial Data Lakehouse Platform",
       client: "MOMSoft · End of Year Project (PFA)", period: "Nov 2025 – Apr 2026", category: "Data Engineering", color: "blue",
@@ -383,7 +390,7 @@ const MAG_DATA = {
   overviewCards: [
     {
       label: "Currently Studying", title: "ENET'Com Sfax", sub: "Data Engineering & AI Systems",
-      badge: "3rd Year", badgeColor: "blue"
+      badge: "Final Year", badgeColor: "blue"
     },
     { label: "Part-time Role", title: "Starwaves", sub: "Media Manager", badge: "Active", badgeColor: "blue" },
     {
