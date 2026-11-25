@@ -142,7 +142,7 @@ const MAG_DATA = {
       logo: "assets/images/logos/voltwise.webp",
       description: "Built a supervised XGBoost model forecasting solar energy output. Integrated a live weather API and benchmarked expected vs real energy production with a Streamlit dashboard.",
       tags: ["Python", "Machine Learning", "XGBoost", "Streamlit", "API Integration"],
-      github: "https://github.com/ademghorbel/ForcastingPVProduction"
+      github: "https://github.com/ademghorbel/VoltWise"
     },
     {
       id: "talan-ai", title: "Legacy System Modernisation", subtitle: "Multi-Agent AI Pipeline",
@@ -150,10 +150,7 @@ const MAG_DATA = {
       logo: "assets/images/logos/TALAN.webp",
       description: "Team-built multi-agent pipeline that routes legacy code to COBOL, VB6, Fortran and generic agents. My part: the structured analyser and the module aggregation agent that groups files into business modules, plus shared work on agent-to-agent (A2A) communication. Continued as LegacyLens, adding Mermaid architecture and class diagrams, a code chatbot and a Streamlit UI.",
       tags: ["LangChain", "LangGraph", "Multi-Agent AI", "A2A", "Python"],
-      github: "https://github.com/JlassiRAed/TalanProject",
-      extraLinks: [
-        { label: "LegacyLens", url: "https://github.com/ademghorbel/LegacyLens" }
-      ]
+      github: "https://github.com/ademghorbel/LegacyLens"
     },
     {
       id: "enetcomdocs", title: "ENETCOMDocs", subtitle: "UX/UI Designer",

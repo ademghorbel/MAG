@@ -1421,3 +1421,8 @@ body[data-theme="light"] .page-hero .eyebrow{color:var(--orange)}
 body[data-theme="light"] .page-hero .eyebrow::before{background:var(--orange)}
 body[data-theme="light"] .hero-accent,
 body[data-theme="light"] .page-hero h1 em{color:var(--orange)!important}
+
+/* ponytail: mobile fixes. The late .contact-grid rule above beat the 900px query, so restate it here. */
+@media(max-width:900px){ .contact-grid{grid-template-columns:1fr} .contact-cell{padding:32px !important} }
+/* ponytail: decorative overflow (glows, fanned artwork cards) must never cause sideways scroll */
+html, body { overflow-x: clip; }
